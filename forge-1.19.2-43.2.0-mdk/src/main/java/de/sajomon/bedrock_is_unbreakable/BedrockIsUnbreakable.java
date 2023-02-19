@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 
 import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
 import de.sajomon.bedrock_is_unbreakable.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -39,9 +41,10 @@ public class BedrockIsUnbreakable
 	
 	@Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientModEvents {
+		@SuppressWarnings("removal")
 		@SubscribeEvent
 		public static void onClientSetup(FMLClientSetupEvent event) {
-			
+			ItemBlockRenderTypes.setRenderLayer(ModBlocks.ONION_BLOCK.get(), RenderType.cutout());
 		}
 	}
 }
