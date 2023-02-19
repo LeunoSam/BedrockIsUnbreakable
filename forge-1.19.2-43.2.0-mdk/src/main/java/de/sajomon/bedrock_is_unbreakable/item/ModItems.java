@@ -21,6 +21,12 @@ public class ModItems {
 	public static final RegistryObject<Item> OBSIDIAN_STICK = ITEMS.register("obsidian_stick",
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)));
 	
+	public static final RegistryObject<Item> SLICED_ONION = ITEMS.register("sliced_onion",
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)));
+	
+	public static final RegistryObject<Item> PLAYER_TEARS = ITEMS.register("player_tears",
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)));
+	
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}
