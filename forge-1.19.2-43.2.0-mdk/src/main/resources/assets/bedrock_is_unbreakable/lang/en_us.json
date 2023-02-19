@@ -1,0 +1,10 @@
+{
+	"item.bedrock_is_unbreakable.obsidian_ingot": "Obsidian Ingot",
+	"item.bedrock_is_unbreakable.crying_obsidian_ingot": "Crying Obsidian Ingot",
+	"item.bedrock_is_unbreakable.obsidian_stick": "Obsidian Stick",
+	
+	"block.bedrock_is_unbreakable.obsidian_block": "Block of Obsidian",
+	"block.bedrock_is_unbreakable.obsidian_brick": "Obsidian Bricks",
+	
+	"itemGroup.bedrock_is_unbreakable_tab": "This Bedrock Is Unbreakable!"
+}

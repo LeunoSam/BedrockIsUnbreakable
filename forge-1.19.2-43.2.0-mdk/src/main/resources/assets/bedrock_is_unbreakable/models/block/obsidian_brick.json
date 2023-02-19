@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "bedrock_is_unbreakable:block/obsidian_brick"
+	}
+}
