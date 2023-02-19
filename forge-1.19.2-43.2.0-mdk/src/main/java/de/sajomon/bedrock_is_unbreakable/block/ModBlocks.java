@@ -3,12 +3,14 @@ package de.sajomon.bedrock_is_unbreakable.block;
 import java.util.function.Supplier;
 
 import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
+import de.sajomon.bedrock_is_unbreakable.block.custom.OnionBlock;
 import de.sajomon.bedrock_is_unbreakable.item.ModCreativeModeTab;
 import de.sajomon.bedrock_is_unbreakable.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -19,7 +21,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlocks {
-	//snydt was here
+	
 	public static final DeferredRegister<Block> BLOCKS =
 			DeferredRegister.create(ForgeRegistries.BLOCKS, BedrockIsUnbreakable.MOD_ID);
 	
@@ -54,6 +56,10 @@ public class ModBlocks {
 			() -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(300f).
 					requiresCorrectToolForDrops().explosionResistance(2000f)),
 			ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_BLOCK_TAB);
+	
+	public static final RegistryObject<Block> ONION_BLOCK = BLOCKS.register("onion_block",
+			() -> new OnionBlock(BlockBehaviour.Properties.copy(Blocks.POTATOES))
+			);
 	
 	
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
