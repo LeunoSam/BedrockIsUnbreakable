@@ -19,7 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlocks {
-	
+	//snydt was here
 	public static final DeferredRegister<Block> BLOCKS =
 			DeferredRegister.create(ForgeRegistries.BLOCKS, BedrockIsUnbreakable.MOD_ID);
 	
