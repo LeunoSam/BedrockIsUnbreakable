@@ -13,7 +13,8 @@
 	"block.bedrock_is_unbreakable.obsidian_brick": "Obsidian Bricks",
 	"block.bedrock_is_unbreakable.obsidian_brick_stairs": "Obsidian Brick Stairs",
 	"block.bedrock_is_unbreakable.obsidian_brick_slab": "Obsidian Brick Slab",
-	
+	"block.bedrock_is_unbreakable.onion_block": "Onion Crop",
+
 	"itemGroup.bedrock_is_unbreakable_item_tab": "This Bedrock Is Unbreakable Items!",
 	"itemGroup.bedrock_is_unbreakable_block_tab": "This Bedrock Is Unbreakable Blocks!"
 }

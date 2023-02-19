@@ -57,7 +57,7 @@ public class ModBlocks {
 					requiresCorrectToolForDrops().explosionResistance(2000f)),
 			ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_BLOCK_TAB);
 	
-	public static final RegistryObject<Block> ONION_BLOCK = BLOCKS.register("onion_block",
+	public static final RegistryObject<Block> ONION_BLOCK = BLOCKS.register("onions",
 			() -> new OnionBlock(BlockBehaviour.Properties.copy(Blocks.POTATOES))
 			);
 	
