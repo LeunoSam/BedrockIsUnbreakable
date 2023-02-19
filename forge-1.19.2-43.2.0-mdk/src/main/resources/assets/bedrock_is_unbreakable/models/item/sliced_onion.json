@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated", 
 	"textures": {
-		"layer0": "bedrock_is_unbreakable:item/player_tears"
+		"layer0": "bedrock_is_unbreakable:item/sliced_onion"
 	}
 }
