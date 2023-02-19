@@ -1,7 +1,7 @@
 package de.sajomon.bedrock_is_unbreakable.block.custom;
 
+import de.sajomon.bedrock_is_unbreakable.item.ModItems;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -14,7 +14,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class OnionBlock extends CropBlock {
 
-	public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 10);
+	public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
 	private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 7.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 9.0D, 16.0D)};
 
 
@@ -24,7 +24,7 @@ public class OnionBlock extends CropBlock {
 
 	@Override
 	protected ItemLike getBaseSeedId() {
-		return Items.POTATO; // TODO implement method
+		return ModItems.ONION.get();
 	}
 
 	@Override
