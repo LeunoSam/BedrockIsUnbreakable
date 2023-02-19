@@ -26,7 +26,7 @@ public class ObsidianKnifeItem extends Item implements Vanishable {
 			int slot = i.findSlotMatchingItem(new ItemStack(ModItems.ONION.get()));
 			if(slot != -1) {
 				i.getItem(slot).shrink(1);
-				i.add(new ItemStack(ModItems.SLICED_ONION.get()));
+				player.drop(new ItemStack(ModItems.SLICED_ONION.get(), 4), true);
 				if(count > 4) {
 					i.add(new ItemStack(ModItems.PLAYER_TEARS.get()));
 					count = 0;
