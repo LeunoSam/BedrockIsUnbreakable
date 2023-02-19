@@ -4,7 +4,12 @@
 	"item.bedrock_is_unbreakable.obsidian_stick": "Obsidian Stick",
 	
 	"block.bedrock_is_unbreakable.obsidian_block": "Block of Obsidian",
+	"block.bedrock_is_unbreakable.obsidian_block_slab": "Obsidian Slab",
+	"block.bedrock_is_unbreakable.obsidian_block_stairs": "Obsidian Stairs",
 	"block.bedrock_is_unbreakable.obsidian_brick": "Obsidian Bricks",
+	"block.bedrock_is_unbreakable.obsidian_brick_stairs": "Obsidian Brick Stairs",
+	"block.bedrock_is_unbreakable.obsidian_brick_slab": "Obsidian Brick Slab",
 	
-	"itemGroup.bedrock_is_unbreakable_tab": "This Bedrock Is Unbreakable!"
+	"itemGroup.bedrock_is_unbreakable_item_tab": "This Bedrock Is Unbreakable Items!",
+	"itemGroup.bedrock_is_unbreakable_block_tab": "This Bedrock Is Unbreakable Blocks!"
 }
