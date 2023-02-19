@@ -7,22 +7,32 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Vanishable;
 import net.minecraft.world.level.Level;
 
-public class ObsidianKnifeItem extends Item {
+public class ObsidianKnifeItem extends Item implements Vanishable {
 	
+	private int count;
 
 	public ObsidianKnifeItem(Properties props) {
 		super(props);
+		count = 0;
 	}
 	
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
 		if(!level.isClientSide && hand == InteractionHand.MAIN_HAND) {
 			Inventory i = player.getInventory();
-			if(i.contains(new ItemStack(ModItems.ONION.get()))) {
+			int slot = i.findSlotMatchingItem(new ItemStack(ModItems.ONION.get()));
+			if(slot != -1) {
+				i.getItem(slot).shrink(1);
 				i.add(new ItemStack(ModItems.SLICED_ONION.get()));
-				player.getCooldowns().addCooldown(this, 10);
+				if(count > 4) {
+					i.add(new ItemStack(ModItems.PLAYER_TEARS.get()));
+					count = 0;
+				}
+				player.getCooldowns().addCooldown(this, 5);
+				count++;
 			}
 		}
 		return super.use(level, player, hand);
