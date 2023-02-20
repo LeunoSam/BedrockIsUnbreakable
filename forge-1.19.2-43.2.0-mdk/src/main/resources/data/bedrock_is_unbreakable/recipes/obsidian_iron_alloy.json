@@ -7,10 +7,10 @@
 	],
 	
 	"key": {
-		"#": {
+		"*": {
 		"item": "bedrock_is_unbreakable:crying_obsidian_ingot"
 		},
-		"*": {
+		"#": {
 		"item": "bedrock_is_unbreakable:obsidian_ingot"
 		},
 		"+": {
