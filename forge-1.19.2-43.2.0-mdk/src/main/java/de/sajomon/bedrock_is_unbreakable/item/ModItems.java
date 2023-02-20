@@ -51,6 +51,10 @@ public class ModItems {
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
 			);
 	
+	public static final RegistryObject<Item> OBSIDIAN_STEEL = ITEMS.register("obsidian_steel",
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
+			);
+	
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}

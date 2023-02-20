@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 169,
+  "experience": 2.0,
+  "ingredient": {
+    "item": "bedrock_is_unbreakable:obsidian_iron_alloy"
+  },
+  
+  "result": "bedrock_is_unbreakable:obsidian_steel"
+  
+}
