@@ -1,7 +1,7 @@
 package de.sajomon.bedrock_is_unbreakable.item;
 
 import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
-import de.sajomon.bedrock_is_unbreakable.item.custom.ObsidianKnifeItem;
+import de.sajomon.bedrock_is_unbreakable.item.custom.KnifeItem;
 import net.minecraft.world.food.FoodProperties;
 import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
 import net.minecraft.world.item.Item;
@@ -31,8 +31,8 @@ public class ModItems {
 			);
 	
 	public static final RegistryObject<Item> OBSIDIAN_KNIFE = ITEMS.register("obsidian_knife",
-			() -> new ObsidianKnifeItem(ModTiers.OBSIDIAN, 4, 5f,
-					new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)));
+			() -> new KnifeItem(ModTiers.OBSIDIAN, 4, 5f,
+					new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB), 20));
 	
 	public static final RegistryObject<Item> SLICED_ONION = ITEMS.register("sliced_onion",
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)
