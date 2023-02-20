@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "bedrock_is_unbreakable:player_tears"
+    },
+    "title": "Shedding Tears",
+    "description": "Cut onions until you cry.",
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "bedrock_is_unbreakable:onions",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bedrock_is_unbreakable:player_tears"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
