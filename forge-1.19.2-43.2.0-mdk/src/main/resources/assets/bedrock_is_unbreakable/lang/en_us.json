@@ -1,4 +1,5 @@
 {
+	// items of TBIU
 	"item.bedrock_is_unbreakable.obsidian_ingot": "Obsidian Ingot",
 	"item.bedrock_is_unbreakable.crying_obsidian_ingot": "Crying Obsidian Ingot",
 	"item.bedrock_is_unbreakable.obsidian_stick": "Obsidian Stick",
@@ -6,7 +7,9 @@
 	"item.bedrock_is_unbreakable.player_tears": "Tears",
 	"item.bedrock_is_unbreakable.onion": "Onion",
 	"item.bedrock_is_unbreakable.obsidian_knife": "Obsidian Knife",
+	"item.bedrock_is_unbreakable.obsidian_iron_alloy": "Obsidian Iron Alloy",
 	
+	// blocks of TBUI
 	"block.bedrock_is_unbreakable.obsidian_block": "Block of Obsidian",
 	"block.bedrock_is_unbreakable.obsidian_block_slab": "Obsidian Slab",
 	"block.bedrock_is_unbreakable.obsidian_block_stairs": "Obsidian Stairs",
@@ -15,9 +18,11 @@
 	"block.bedrock_is_unbreakable.obsidian_brick_slab": "Obsidian Brick Slab",
 	"block.bedrock_is_unbreakable.onion_block": "Onion Crop",
 
+	// item groups of TBUI
 	"itemGroup.bedrock_is_unbreakable_item_tab": "This Bedrock Is Unbreakable Items!",
 	"itemGroup.bedrock_is_unbreakable_block_tab": "This Bedrock Is Unbreakable Blocks!",
 	
+	// tool tips of TBUI
 	"press_shift": "Press Shift",
 	"infoKnife_item": "You can cut onions with a knife!"
 }
