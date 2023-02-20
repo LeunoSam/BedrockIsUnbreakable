@@ -17,13 +17,16 @@ public class ModItems {
 			DeferredRegister.create(ForgeRegistries.ITEMS, BedrockIsUnbreakable.MOD_ID);
 	
 	public static final RegistryObject<Item> OBSIDIAN_INGOT = ITEMS.register("obsidian_ingot",
-			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)));
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
+			);
 	
 	public static final RegistryObject<Item> CRYING_OBSIDIAN_INGOT = ITEMS.register("crying_obsidian_ingot",
-			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)));
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
+			);
 	
 	public static final RegistryObject<Item> OBSIDIAN_STICK = ITEMS.register("obsidian_stick",
-			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)));
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
+			);
 	
 	public static final RegistryObject<Item> ONION = ITEMS.register("onion",
 			() -> new ItemNameBlockItem(ModBlocks.ONION_BLOCK.get(), 
@@ -32,14 +35,21 @@ public class ModItems {
 	
 	public static final RegistryObject<Item> OBSIDIAN_KNIFE = ITEMS.register("obsidian_knife",
 			() -> new KnifeItem(ModTiers.OBSIDIAN, 2, 5f,
-					new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB), 20));
+					new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB), 20)
+			);
 	
 	public static final RegistryObject<Item> SLICED_ONION = ITEMS.register("sliced_onion",
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)
-					.food(new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+					.food(new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build()))
+			);
 	
 	public static final RegistryObject<Item> PLAYER_TEARS = ITEMS.register("player_tears",
-			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)));
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
+			);
+	
+	public static final RegistryObject<Item> OBSIDIAN_IRON_ALLOY = ITEMS.register("obsidian_iron_alloy",
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
+			);
 	
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
