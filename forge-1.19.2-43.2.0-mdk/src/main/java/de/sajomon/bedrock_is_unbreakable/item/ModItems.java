@@ -31,7 +31,7 @@ public class ModItems {
 			);
 	
 	public static final RegistryObject<Item> OBSIDIAN_KNIFE = ITEMS.register("obsidian_knife",
-			() -> new KnifeItem(ModTiers.OBSIDIAN, 4, 5f,
+			() -> new KnifeItem(ModTiers.OBSIDIAN, 2, 5f,
 					new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB), 20));
 	
 	public static final RegistryObject<Item> SLICED_ONION = ITEMS.register("sliced_onion",

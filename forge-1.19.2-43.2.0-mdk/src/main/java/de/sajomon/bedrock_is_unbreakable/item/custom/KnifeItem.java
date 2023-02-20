@@ -1,7 +1,11 @@
 package de.sajomon.bedrock_is_unbreakable.item.custom;
 
+import java.util.List;
 import java.util.Random;
 import de.sajomon.bedrock_is_unbreakable.item.ModItems;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.damagesource.DamageSource;
@@ -10,6 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
 public class KnifeItem extends SwordItem {
@@ -56,4 +61,14 @@ public class KnifeItem extends SwordItem {
 		return super.use(level, player, hand);
 	}
 
+	@Override
+	public void appendHoverText(ItemStack itemStack, Level level, List<Component> components, TooltipFlag tooltipFlag) {
+		if(!Screen.hasShiftDown()) {
+			components.add(Component.translatable("press_shift").withStyle(ChatFormatting.GRAY));
+		} else {
+			components.add(Component.translatable("infoKnife_item").withStyle(ChatFormatting.YELLOW));
+		}
+		super.appendHoverText(itemStack, level, components, tooltipFlag);
+	}
+	
 }

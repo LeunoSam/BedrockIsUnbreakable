@@ -16,5 +16,8 @@
 	"block.bedrock_is_unbreakable.onion_block": "Onion Crop",
 
 	"itemGroup.bedrock_is_unbreakable_item_tab": "This Bedrock Is Unbreakable Items!",
-	"itemGroup.bedrock_is_unbreakable_block_tab": "This Bedrock Is Unbreakable Blocks!"
+	"itemGroup.bedrock_is_unbreakable_block_tab": "This Bedrock Is Unbreakable Blocks!",
+	
+	"press_shift": "Press Shift",
+	"infoKnife_item": "You can cut onions with a knife!"
 }
