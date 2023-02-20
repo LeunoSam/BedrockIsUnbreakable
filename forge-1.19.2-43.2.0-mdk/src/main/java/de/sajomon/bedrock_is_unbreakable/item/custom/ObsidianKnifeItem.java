@@ -1,5 +1,7 @@
 package de.sajomon.bedrock_is_unbreakable.item.custom;
 
+import java.util.function.Consumer;
+
 import de.sajomon.bedrock_is_unbreakable.item.ModItems;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -35,6 +37,7 @@ public class ObsidianKnifeItem extends SwordItem {
 				}
 				player.getCooldowns().addCooldown(this, 5);
 				count++;
+				player.getMainHandItem().hurtAndBreak(1, player, p41625 -> p41625.getAttackAnim(1));
 			}
 		}
 		return super.use(level, player, hand);
