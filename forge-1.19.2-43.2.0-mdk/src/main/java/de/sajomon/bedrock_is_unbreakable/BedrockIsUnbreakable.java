@@ -9,8 +9,14 @@ import de.sajomon.bedrock_is_unbreakable.item.ModItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.SpawnPlacementRegisterEvent;
+import net.minecraftforge.event.entity.SpawnPlacementRegisterEvent.MergedSpawnPredicate;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -18,6 +24,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+import java.util.HashMap;
+import java.util.Map;
 
 import org.slf4j.Logger;
 
@@ -42,6 +50,13 @@ public class BedrockIsUnbreakable
 
 	private void commonSetup(final FMLCommonSetupEvent event) {
 		
+		Map<EntityType<?>, MergedSpawnPredicate<?>> mobSpawnMap = new HashMap<>();
+		// put Blue Slime Spawning into mobSpawnMap
+		mobSpawnMap.put(ModEntityTypes.BLUE_SLIME.get(), 
+				new MergedSpawnPredicate<>(Monster::checkMobSpawnRules, SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE));
+		
+		// create Spawn Placement Register Event
+		new SpawnPlacementRegisterEvent(mobSpawnMap);
 	}
 
 	
