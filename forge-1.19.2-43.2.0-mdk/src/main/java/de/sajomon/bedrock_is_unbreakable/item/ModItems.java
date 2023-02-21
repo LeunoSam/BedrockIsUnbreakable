@@ -1,11 +1,13 @@
 package de.sajomon.bedrock_is_unbreakable.item;
 
 import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
-import de.sajomon.bedrock_is_unbreakable.item.custom.KnifeItem;
 import net.minecraft.world.food.FoodProperties;
 import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
+import de.sajomon.bedrock_is_unbreakable.entity.ModEntityTypes;
+import de.sajomon.bedrock_is_unbreakable.item.custom.KnifeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -53,6 +55,11 @@ public class ModItems {
 	
 	public static final RegistryObject<Item> OBSIDIAN_STEEL = ITEMS.register("obsidian_steel",
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
+			);
+	
+	public static final RegistryObject<Item> BLUE_SLIME_SPAWN_EGG = ITEMS.register("blue_slime_spawn_egg",
+			() -> new ForgeSpawnEggItem(ModEntityTypes.BLUE_SLIME, 984442,
+					4617149, new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
 			);
 	
 	public static void register(IEventBus eventBus) {
