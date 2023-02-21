@@ -17,7 +17,7 @@ public class ModEntityTypes {
 	
 	public static final RegistryObject<EntityType<BlueSlime>> BLUE_SLIME =
 			ENTITY_TYPES.register("blue_slime",
-					() -> EntityType.Builder.of(BlueSlime::new, MobCategory.MONSTER)
+					() -> EntityType.Builder.of(BlueSlime::new, MobCategory.MONSTER).sized(2f, 2f)
 					.build(new ResourceLocation(BedrockIsUnbreakable.MOD_ID, "blue_slime").toString())
 	);
 	
