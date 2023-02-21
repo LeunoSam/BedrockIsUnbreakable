@@ -2,10 +2,13 @@ package de.sajomon.bedrock_is_unbreakable.item.custom;
 
 import java.util.List;
 import java.util.Random;
+
+import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
 import de.sajomon.bedrock_is_unbreakable.item.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.damagesource.DamageSource;
@@ -64,9 +67,11 @@ public class KnifeItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemStack, Level level, List<Component> components, TooltipFlag tooltipFlag) {
 		if(!Screen.hasShiftDown()) {
-			components.add(Component.translatable("press_shift").withStyle(ChatFormatting.GRAY));
+			components.add(Component.translatable(new ResourceLocation(BedrockIsUnbreakable.MOD_ID,"press_shift")
+					.toString()).withStyle(ChatFormatting.GRAY));
 		} else {
-			components.add(Component.translatable("infoKnife_item").withStyle(ChatFormatting.YELLOW));
+			components.add(Component.translatable(new ResourceLocation(BedrockIsUnbreakable.MOD_ID,"info_knife_item")
+					.toString()).withStyle(ChatFormatting.YELLOW));
 		}
 		super.appendHoverText(itemStack, level, components, tooltipFlag);
 	}

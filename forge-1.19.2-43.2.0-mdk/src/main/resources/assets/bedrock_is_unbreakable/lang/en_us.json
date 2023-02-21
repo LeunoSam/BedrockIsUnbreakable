@@ -24,6 +24,6 @@
 	"itemGroup.bedrock_is_unbreakable_block_tab": "This Bedrock Is Unbreakable Blocks!",
 	
 	// tool tips of TBUI
-	"press_shift": "Press Shift",
-	"infoKnife_item": "You can cut onions with a knife!"
+	"bedrock_is_unbreakable:press_shift": "Press Shift",
+	"bedrock_is_unbreakable:info_knife_item": "You can cut onions with a knife!"
 }
