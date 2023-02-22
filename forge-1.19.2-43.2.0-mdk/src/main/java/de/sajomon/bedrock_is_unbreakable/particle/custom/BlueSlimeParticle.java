@@ -16,12 +16,12 @@ public class BlueSlimeParticle extends TextureSheetParticle {
 			SpriteSet spriteSet, double xd, double yd, double zd) {
 		super(level, xCord, yCord, zCord, xd, yd, zd);
 
-		this.friction = 0.8f;
+		this.friction = 0.5f;
 		this.xd = xd;
 		this.yd = yd;
 		this.zd = zd;
-		this.quadSize *= 0.85f;
-		this.lifetime = 20;
+		this.quadSize *= 0.5f;
+		this.lifetime = 10;
 		this.setSpriteFromAge(spriteSet);
 
 		this.rCol = 1f;
