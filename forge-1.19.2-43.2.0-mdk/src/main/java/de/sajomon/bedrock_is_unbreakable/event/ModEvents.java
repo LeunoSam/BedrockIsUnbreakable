@@ -47,7 +47,7 @@ public class ModEvents {
 		}
 		
 		@SubscribeEvent
-		public static void registerParticleFactorier(final RegisterParticleProvidersEvent event) {
+		public static void registerParticleProvider(final RegisterParticleProvidersEvent event) {
 			event.register(ModParticles.BLUE_SLIME_PARTICLES.get(), BlueSlimeParticle.Provider::new); 
 		}
 
