@@ -10,6 +10,8 @@
 	"item.bedrock_is_unbreakable.obsidian_iron_alloy": "Obsidian Iron Alloy",
 	"item.bedrock_is_unbreakable.obsidian_steel": "Obsidian Steel",
 	"item.bedrock_is_unbreakable.blue_slime_ball": "blue Slimeball",
+	"item.bedrock_is_unbreakable.obsidian_pickaxe": "Obsidian Pickaxe",
+	"item.bedrock_is_unbreakable.obsidian_steel_pickaxe": "Obsidian Steel Pickaxe",
 	
 	// blocks of TBUI
 	"block.bedrock_is_unbreakable.obsidian_block": "Block of Obsidian",
