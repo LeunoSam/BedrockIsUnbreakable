@@ -15,37 +15,19 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
 	
+	private ModItems() {
+		super();
+	}
+	
 	public static final DeferredRegister<Item> ITEMS = 
 			DeferredRegister.create(ForgeRegistries.ITEMS, BedrockIsUnbreakable.MOD_ID);
 	
+	// ingot
 	public static final RegistryObject<Item> OBSIDIAN_INGOT = ITEMS.register("obsidian_ingot",
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
 			);
 	
 	public static final RegistryObject<Item> CRYING_OBSIDIAN_INGOT = ITEMS.register("crying_obsidian_ingot",
-			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
-			);
-	
-	public static final RegistryObject<Item> OBSIDIAN_STICK = ITEMS.register("obsidian_stick",
-			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
-			);
-	
-	public static final RegistryObject<Item> ONION = ITEMS.register("onion",
-			() -> new ItemNameBlockItem(ModBlocks.ONION_BLOCK.get(), 
-					new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
-			);
-	
-	public static final RegistryObject<Item> OBSIDIAN_KNIFE = ITEMS.register("obsidian_knife",
-			() -> new KnifeItem(ModTiers.OBSIDIAN, 2, 5f,
-					new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB), 20)
-			);
-	
-	public static final RegistryObject<Item> SLICED_ONION = ITEMS.register("sliced_onion",
-			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)
-					.food(new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build()))
-			);
-	
-	public static final RegistryObject<Item> PLAYER_TEARS = ITEMS.register("player_tears",
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
 			);
 	
@@ -57,6 +39,38 @@ public class ModItems {
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
 			);
 	
+	// sticks
+	public static final RegistryObject<Item> OBSIDIAN_STICK = ITEMS.register("obsidian_stick",
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
+			);
+	
+	// food
+	public static final RegistryObject<Item> ONION = ITEMS.register("onion",
+			() -> new ItemNameBlockItem(ModBlocks.ONION_BLOCK.get(), 
+					new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
+			);
+	
+	public static final RegistryObject<Item> SLICED_ONION = ITEMS.register("sliced_onion",
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)
+					.food(new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build()))
+			);
+	
+	// tools
+	public static final RegistryObject<Item> OBSIDIAN_KNIFE = ITEMS.register("obsidian_knife",
+			() -> new KnifeItem(ModTiers.OBSIDIAN, 2, 5f,
+					new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB), 20)
+			);
+	
+	// player / mob drops
+	public static final RegistryObject<Item> BLUE_SLIME_BALL = ITEMS.register("blue_slime_ball",
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
+			);
+	
+	public static final RegistryObject<Item> PLAYER_TEARS = ITEMS.register("player_tears",
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
+			);
+	
+	// spawn eggs
 	public static final RegistryObject<Item> BLUE_SLIME_SPAWN_EGG = ITEMS.register("blue_slime_spawn_egg",
 			() -> new ForgeSpawnEggItem(ModEntityTypes.BLUE_SLIME, 984442,
 					4617149, new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
