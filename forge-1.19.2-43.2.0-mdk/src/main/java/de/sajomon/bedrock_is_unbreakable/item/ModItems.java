@@ -7,6 +7,7 @@ import de.sajomon.bedrock_is_unbreakable.entity.ModEntityTypes;
 import de.sajomon.bedrock_is_unbreakable.item.custom.KnifeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.PickaxeItem;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -57,9 +58,22 @@ public class ModItems {
 	
 	// tools
 	public static final RegistryObject<Item> OBSIDIAN_KNIFE = ITEMS.register("obsidian_knife",
-			() -> new KnifeItem(ModTiers.OBSIDIAN, 2, 5f,
+			() -> new KnifeItem(ModToolTiers.OBSIDIAN, 0, 3f,
 					new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB), 20)
 			);
+	
+	public static final RegistryObject<Item> OBSIDIAN_PICKAXE = ITEMS.register("obsidian_pickaxe",
+			() -> new PickaxeItem(ModToolTiers.OBSIDIAN, 1, 0f,
+					new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
+					
+			);
+	
+	public static final RegistryObject<Item> OBSIDIAN_STEEL_PICKAXE = ITEMS.register("obsidian_steel_pickaxe",
+			() -> new PickaxeItem(ModToolTiers.OBSIDIAN_STEEL, 1, 0f,
+					new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
+					
+			);
+	
 	
 	// player / mob drops
 	public static final RegistryObject<Item> BLUE_SLIME_BALL = ITEMS.register("blue_slime_ball",
