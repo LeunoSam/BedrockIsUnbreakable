@@ -19,7 +19,7 @@
 	],
 	"spawners": {
 		"type": "bedrock_is_unbreakable:blue_slime",
-		"weight": 5,
+		"weight": 1,
 		"minCount": 1,
 		"maxCount": 1
 	}
