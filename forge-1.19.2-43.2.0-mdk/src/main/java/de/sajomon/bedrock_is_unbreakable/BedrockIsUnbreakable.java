@@ -6,6 +6,7 @@ import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
 import de.sajomon.bedrock_is_unbreakable.entity.ModEntityTypes;
 import de.sajomon.bedrock_is_unbreakable.entity.client.BlueSlimeRenderer;
 import de.sajomon.bedrock_is_unbreakable.item.ModItems;
+import de.sajomon.bedrock_is_unbreakable.particle.ModParticles;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -34,6 +35,7 @@ public class BedrockIsUnbreakable
 		ModItems.register(modEventBus);
 		ModBlocks.register(modEventBus);
 		ModEntityTypes.register(modEventBus);
+		ModParticles.register(modEventBus);
 
 		modEventBus.addListener(this::commonSetup);
 

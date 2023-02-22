@@ -1,5 +1,7 @@
 package de.sajomon.bedrock_is_unbreakable.entity.custom;
 
+import de.sajomon.bedrock_is_unbreakable.particle.ModParticles;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -21,4 +23,8 @@ public class BlueSlime extends Slime {
 				.add(Attributes.MAX_HEALTH, 10.0).build();
 	}
 	
+	@Override
+	protected ParticleOptions getParticleType() {
+		return ModParticles.BLUE_SLIME_PARTICLES.get();
+	}
 }

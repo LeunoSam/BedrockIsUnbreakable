@@ -3,6 +3,9 @@ package de.sajomon.bedrock_is_unbreakable.event;
 import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
 import de.sajomon.bedrock_is_unbreakable.entity.ModEntityTypes;
 import de.sajomon.bedrock_is_unbreakable.entity.custom.BlueSlime;
+import de.sajomon.bedrock_is_unbreakable.particle.ModParticles;
+import de.sajomon.bedrock_is_unbreakable.particle.custom.BlueSlimeParticle;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -15,6 +18,11 @@ public class ModEvents {
 		@SubscribeEvent
 		public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
 			event.put(ModEntityTypes.BLUE_SLIME.get(), BlueSlime.setAttributes());
+		}
+		
+		@SubscribeEvent
+		public static void registerParticleFactorier(final RegisterParticleProvidersEvent event) {
+			event.register(ModParticles.BLUE_SLIME_PARTICLES.get(), BlueSlimeParticle.Provider::new);
 		}
 	}
 
