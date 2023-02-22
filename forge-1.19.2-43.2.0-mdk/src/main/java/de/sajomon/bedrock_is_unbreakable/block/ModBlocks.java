@@ -26,34 +26,34 @@ public class ModBlocks {
 			DeferredRegister.create(ForgeRegistries.BLOCKS, BedrockIsUnbreakable.MOD_ID);
 	
 	public static final RegistryObject<Block> OBSIDIAN_BLOCK = registerBlock("obsidian_block",
-			() -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(300f).
+			() -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(275f).
 					requiresCorrectToolForDrops().explosionResistance(2000f)),
 			ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_BLOCK_TAB);
 	
 	public static final RegistryObject<Block> OBSIDIAN_BLOCK_STAIRS = registerBlock("obsidian_block_stairs",
 			() -> new StairBlock(() -> ModBlocks.OBSIDIAN_BLOCK.get().defaultBlockState(),
-					BlockBehaviour.Properties.of(Material.STONE).strength(300f).
+					BlockBehaviour.Properties.of(Material.STONE).strength(275f).
 					requiresCorrectToolForDrops().explosionResistance(2000f)),
 			ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_BLOCK_TAB);
 	
 	public static final RegistryObject<Block> OBSIDIAN_BLOCK_SLAB = registerBlock("obsidian_block_slab",
-			() -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(300f).
+			() -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(275f).
 					requiresCorrectToolForDrops().explosionResistance(2000f)),
 			ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_BLOCK_TAB);
 	
 	public static final RegistryObject<Block> OBSIDIAN_BRICK = registerBlock("obsidian_brick",
-			() -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(300f).
+			() -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(275f).
 					requiresCorrectToolForDrops().explosionResistance(2000f)),
 			ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_BLOCK_TAB);
 	
 	public static final RegistryObject<Block> OBSIDIAN_BRICK_STAIRS = registerBlock("obsidian_brick_stairs",
 			() -> new StairBlock(() -> ModBlocks.OBSIDIAN_BRICK.get().defaultBlockState(),
-					BlockBehaviour.Properties.of(Material.STONE).strength(300f).
+					BlockBehaviour.Properties.of(Material.STONE).strength(275f).
 					requiresCorrectToolForDrops().explosionResistance(2000f)),
 			ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_BLOCK_TAB);
 	
 	public static final RegistryObject<Block> OBSIDIAN_BRICK_SLAB = registerBlock("obsidian_brick_slab",
-			() -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(300f).
+			() -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(275f).
 					requiresCorrectToolForDrops().explosionResistance(2000f)),
 			ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_BLOCK_TAB);
 	
