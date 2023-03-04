@@ -5,6 +5,7 @@ import net.minecraft.world.food.FoodProperties;
 import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
 import de.sajomon.bedrock_is_unbreakable.entity.ModEntityTypes;
 import de.sajomon.bedrock_is_unbreakable.item.custom.KnifeItem;
+import de.sajomon.bedrock_is_unbreakable.item.custom.ObsidianSteelPickaxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.PickaxeItem;
@@ -69,7 +70,7 @@ public class ModItems {
 			);
 	
 	public static final RegistryObject<Item> OBSIDIAN_STEEL_PICKAXE = ITEMS.register("obsidian_steel_pickaxe",
-			() -> new PickaxeItem(ModToolTiers.OBSIDIAN_STEEL, 1, 0f,
+			() -> new ObsidianSteelPickaxeItem(ModToolTiers.OBSIDIAN_STEEL, 1, 0f,
 					new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
 					
 			);
