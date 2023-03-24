@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:crying_obsidian"
+  },
+  "addition": {
+    "item": "bedrock_is_unbreakable:blue_slime_ball"
+  },
+  "result": {
+    "item": "bedrock_is_unbreakable:onion",
+    "count": 10
+  }
+}
