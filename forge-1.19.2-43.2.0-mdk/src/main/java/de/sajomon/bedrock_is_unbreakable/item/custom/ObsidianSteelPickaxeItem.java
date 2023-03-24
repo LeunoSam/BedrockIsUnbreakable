@@ -22,7 +22,7 @@ public class ObsidianSteelPickaxeItem extends PickaxeItem {
 			Vec3 direction = player.getViewVector(0).scale(0.01);
 			Vec3 eyes = player.getEyePosition(0);
 			Vec3 location = eyes.add(direction);
-			
+			//selects first non-air-block within 4 blocks
 			while (level.getBlockState(new BlockPos(location)).toString().equals("Block{minecraft:air}")
 					&& absVec3(substractVec3(eyes, location)) <= 4) {
 				location = location.add(direction);
