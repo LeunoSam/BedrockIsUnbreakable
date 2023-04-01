@@ -67,8 +67,14 @@ public class ModEvents {
 		@SuppressWarnings("removal")
 		@SubscribeEvent
 		public static void onClientSetup(FMLClientSetupEvent event) {
+			// grass and crops
 			ItemBlockRenderTypes.setRenderLayer(ModBlocks.ONION_BLOCK.get(), RenderType.cutout());
+			ItemBlockRenderTypes.setRenderLayer(ModBlocks.ONION_GRASS.get(), RenderType.cutout());
+			
+			// blocks
 			ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_SLIME_BLOCK.get(), RenderType.translucent());
+			
+			// entities
 			EntityRenderers.register(ModEntityTypes.BLUE_SLIME.get(), BlueSlimeRenderer::new);
 		}
 	}
