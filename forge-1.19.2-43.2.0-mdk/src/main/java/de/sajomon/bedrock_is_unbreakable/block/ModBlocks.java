@@ -12,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.SlimeBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -61,6 +62,10 @@ public class ModBlocks {
 			() -> new OnionBlock(BlockBehaviour.Properties.copy(Blocks.POTATOES))
 			);
 	
+	public static final RegistryObject<Block> BLUE_SLIME_BLOCK = registerBlock("blue_slime_block",
+			() -> new SlimeBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK)),
+					ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_BLOCK_TAB
+			);
 	
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
 		RegistryObject<T> toReturn = BLOCKS.register(name, block);
