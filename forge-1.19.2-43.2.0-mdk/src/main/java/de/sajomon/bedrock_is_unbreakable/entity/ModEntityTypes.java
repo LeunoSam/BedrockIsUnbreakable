@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModEntityTypes {
 	
-	public static DeferredRegister<EntityType<?>> ENTITY_TYPES =
+	public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
 			DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, BedrockIsUnbreakable.MOD_ID);
 	
 	public static final RegistryObject<EntityType<BlueSlime>> BLUE_SLIME =

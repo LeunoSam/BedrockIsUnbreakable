@@ -6,6 +6,8 @@ import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
 import de.sajomon.bedrock_is_unbreakable.entity.ModEntityTypes;
 import de.sajomon.bedrock_is_unbreakable.item.ModItems;
 import de.sajomon.bedrock_is_unbreakable.particle.ModParticles;
+import de.sajomon.bedrock_is_unbreakable.world.feature.ModConfiguredFeatures;
+import de.sajomon.bedrock_is_unbreakable.world.feature.ModPlacedFeatures;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -27,6 +29,8 @@ public class BedrockIsUnbreakable {
 		ModBlocks.register(modEventBus);
 		ModEntityTypes.register(modEventBus);
 		ModParticles.register(modEventBus);
+		ModConfiguredFeatures.register(modEventBus);
+		ModPlacedFeatures.register(modEventBus);
 
 		MinecraftForge.EVENT_BUS.register(this);
 	}
