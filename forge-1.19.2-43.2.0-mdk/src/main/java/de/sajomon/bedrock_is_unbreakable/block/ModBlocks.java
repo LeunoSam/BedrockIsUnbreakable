@@ -3,6 +3,7 @@ package de.sajomon.bedrock_is_unbreakable.block;
 import java.util.function.Supplier;
 
 import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
+import de.sajomon.bedrock_is_unbreakable.block.custom.BlueSlimeBlock;
 import de.sajomon.bedrock_is_unbreakable.block.custom.OnionBlock;
 import de.sajomon.bedrock_is_unbreakable.item.ModCreativeModeTab;
 import de.sajomon.bedrock_is_unbreakable.item.ModItems;
@@ -13,7 +14,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SlimeBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -64,7 +64,7 @@ public class ModBlocks {
 			);
 	
 	public static final RegistryObject<Block> BLUE_SLIME_BLOCK = registerBlock("blue_slime_block",
-			() -> new SlimeBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK)),
+			() -> new BlueSlimeBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK)),
 					ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_BLOCK_TAB
 			);
 	

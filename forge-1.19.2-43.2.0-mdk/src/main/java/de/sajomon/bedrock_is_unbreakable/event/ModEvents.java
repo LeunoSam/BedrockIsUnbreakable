@@ -68,6 +68,7 @@ public class ModEvents {
 		@SubscribeEvent
 		public static void onClientSetup(FMLClientSetupEvent event) {
 			ItemBlockRenderTypes.setRenderLayer(ModBlocks.ONION_BLOCK.get(), RenderType.cutout());
+			ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_SLIME_BLOCK.get(), RenderType.translucent());
 			EntityRenderers.register(ModEntityTypes.BLUE_SLIME.get(), BlueSlimeRenderer::new);
 		}
 	}

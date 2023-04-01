@@ -1,6 +1,6 @@
-{   "parent": "minecraft:block/block",
+{   "parent": "block/block",
     "textures": {
-        "particle": "bedrock_is_unbreakable:particle/blue_slime_particles",
+        "particle": "bedrock_is_unbreakable:block/blue_slime_block",
         "texture": "bedrock_is_unbreakable:block/blue_slime_block"
     },
     "elements": [
