@@ -11,6 +11,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SlimeBlock;
 import net.minecraft.world.level.block.StairBlock;
@@ -67,6 +68,10 @@ public class ModBlocks {
 					ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_BLOCK_TAB
 			);
 	
+	public static final RegistryObject<Block> ONION_GRASS = registerBlock("onion_grass",
+			() -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)),
+					ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_BLOCK_TAB
+			);
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
 		RegistryObject<T> toReturn = BLOCKS.register(name, block);
 		registerBlockItem(name, toReturn, tab);
