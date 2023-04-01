@@ -20,7 +20,7 @@ public class BlueSlimeParticle extends TextureSheetParticle {
 		this.xd = xd;
 		this.yd = yd;
 		this.zd = zd;
-		this.quadSize *= 0.5f;
+		this.quadSize *= 0.2f;
 		this.lifetime = 10;
 		this.setSpriteFromAge(spriteSet);
 

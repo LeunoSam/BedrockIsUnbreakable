@@ -24,6 +24,7 @@
 	"block.bedrock_is_unbreakable.obsidian_brick_stairs": "Obsidian Brick Stairs",
 	"block.bedrock_is_unbreakable.obsidian_brick_slab": "Obsidian Brick Slab",
 	"block.bedrock_is_unbreakable.onion_block": "Onion Crop",
+	"block.bedrock_is_unbreakable.onion_grass": "Onion Grass",
 
 	// item groups of TBUI
 	"itemGroup.bedrock_is_unbreakable_item_tab": "This Bedrock Is Unbreakable Items!",
