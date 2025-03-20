@@ -16,8 +16,8 @@ public class BedrockIsUnbreakable {
     public static final String MOD_ID = "bedrock_is_unbreakable";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public BedrockIsUnbreakable() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public BedrockIsUnbreakable(FMLJavaModLoadingContext context) {
+        IEventBus modEventBus = context.getModEventBus();
         
         MinecraftForge.EVENT_BUS.register(this);
     }
