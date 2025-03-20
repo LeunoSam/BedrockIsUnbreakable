@@ -19,14 +19,6 @@ public class ModCreativeModeTab {
             "bedrock_is_unbreakable_item_tab", ModItems.OBSIDIAN_INGOT,
             List.of(ModItems.OBSIDIAN_INGOT));
 
-//    public static final RegistryObject<CreativeModeTab> BEDROCK_IS_UNBREAKABLE_ITEM_TAB = TABS
-//            .register("bedrock_is_unbreakable_item_tab",
-//                    () -> CreativeModeTab.builder()
-//                            .icon(() -> ModItems.OBSIDIAN_INGOT.get().getDefaultInstance())
-//                            .displayItems((parameters, output) -> {
-//                                output.accept(ModItems.OBSIDIAN_INGOT.get());
-//                            }).build());
-
     public static final RegistryObject<CreativeModeTab> BEDROCK_IS_UNBREAKABLE_BLOCK_TAB = TABS
             .register("bedrock_is_unbreakable_block_tab", () -> CreativeModeTab.builder().build());
 
