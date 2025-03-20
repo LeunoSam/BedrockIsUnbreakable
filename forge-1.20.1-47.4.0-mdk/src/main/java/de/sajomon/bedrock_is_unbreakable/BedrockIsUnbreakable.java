@@ -2,8 +2,10 @@ package de.sajomon.bedrock_is_unbreakable;
 
 import com.mojang.logging.LogUtils;
 
+import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
 import de.sajomon.bedrock_is_unbreakable.item.ModCreativeModeTab;
 import de.sajomon.bedrock_is_unbreakable.item.ModItems;
+import de.sajomon.bedrock_is_unbreakable.particle.ModParticles;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -22,6 +24,8 @@ public class BedrockIsUnbreakable {
         IEventBus modEventBus = context.getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModParticles.register(modEventBus);
         ModCreativeModeTab.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
