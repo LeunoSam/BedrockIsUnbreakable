@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "bedrock_is_unbreakable:obsidian_brick"
+  },
+  "result": "bedrock_is_unbreakable:obsidian_brick_slab"
+}

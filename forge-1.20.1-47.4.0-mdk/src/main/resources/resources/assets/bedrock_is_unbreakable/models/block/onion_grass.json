@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/tinted_cross",
+  "textures": {
+    "cross": "bedrock_is_unbreakable:block/onion_grass"
+  }
+}

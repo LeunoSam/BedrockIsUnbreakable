@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"": { "model": "bedrock_is_unbreakable:block/obsidian_brick"}
+	}
+}

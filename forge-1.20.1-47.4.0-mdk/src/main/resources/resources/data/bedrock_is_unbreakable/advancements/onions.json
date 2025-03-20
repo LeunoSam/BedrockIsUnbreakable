@@ -1,0 +1,20 @@
+{
+  "display": {
+    "icon": {
+      "item": "bedrock_is_unbreakable:onion"
+    },
+    "title": "Onions!",
+    "description": "Plant an onion.",
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "bedrock_is_unbreakable:onions"
+      }
+    }
+  }
+}
