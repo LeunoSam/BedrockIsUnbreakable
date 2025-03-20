@@ -1,5 +1,5 @@
 {
-	"parent": "item/generated", 
+	"parent": "minecraft:item/handheld", 
 	"textures": {
 		"layer0": "bedrock_is_unbreakable:item/obsidian_pickaxe"
 	}
