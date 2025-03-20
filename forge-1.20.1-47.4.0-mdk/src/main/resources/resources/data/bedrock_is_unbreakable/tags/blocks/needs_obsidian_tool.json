@@ -1,0 +1,11 @@
+{
+	"replace": false,
+	"values": [
+		"bedrock_is_unbreakable:obsidian_block",
+		"bedrock_is_unbreakable:obsidian_brick",
+		"bedrock_is_unbreakable:obsidian_block_stairs",
+		"bedrock_is_unbreakable:obsidian_block_slab",
+		"bedrock_is_unbreakable:obsidian_brick_stairs",
+		"bedrock_is_unbreakable:obsidian_brick_slab"
+	]
+}

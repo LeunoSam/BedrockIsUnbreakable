@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/crop",
+	"textures": {
+		"crop":	 "bedrock_is_unbreakable:block/onions_stage3"
+	}
+}

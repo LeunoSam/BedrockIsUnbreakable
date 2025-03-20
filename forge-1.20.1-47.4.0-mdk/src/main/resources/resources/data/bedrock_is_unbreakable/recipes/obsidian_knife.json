@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"  #",
+		" # ",
+		"*  "
+	],
+	
+	"key": {
+		"#": {
+		"item": "bedrock_is_unbreakable:obsidian_ingot"
+		},
+		"*": {
+		"item": "bedrock_is_unbreakable:obsidian_stick"
+		}
+	},
+	
+	"result": {
+		"count": 1,
+		"item": "bedrock_is_unbreakable:obsidian_knife"
+	}
+}

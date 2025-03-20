@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"#": {
+			"item": "bedrock_is_unbreakable:obsidian_brick"
+		}
+	},
+	"pattern": [
+		"#  ",
+		"## ",
+		"###"
+	],
+	"result": {
+		"count": 4,
+		"item": "bedrock_is_unbreakable:obsidian_brick_stairs"
+	}
+}

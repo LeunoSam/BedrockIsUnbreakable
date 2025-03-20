@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "bedrock_is_unbreakable:block/obsidian_block",
+    "side": "bedrock_is_unbreakable:block/obsidian_block",
+    "top": "bedrock_is_unbreakable:block/obsidian_block"
+  }
+}
