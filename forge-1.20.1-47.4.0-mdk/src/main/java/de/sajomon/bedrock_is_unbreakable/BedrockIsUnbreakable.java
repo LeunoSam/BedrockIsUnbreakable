@@ -6,7 +6,7 @@ import com.mojang.logging.LogUtils;
 
 import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
 import de.sajomon.bedrock_is_unbreakable.entity.ModEntityTypes;
-import de.sajomon.bedrock_is_unbreakable.item.ModCreativeModeTab;
+import de.sajomon.bedrock_is_unbreakable.item.ModCreativeModeTabs;
 import de.sajomon.bedrock_is_unbreakable.item.ModItems;
 import de.sajomon.bedrock_is_unbreakable.particle.ModParticles;
 import net.minecraftforge.common.MinecraftForge;
@@ -26,7 +26,7 @@ public class BedrockIsUnbreakable {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModCreativeModeTab.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
         ModEntityTypes.register(modEventBus);
         ModParticles.register(modEventBus);

@@ -11,20 +11,17 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModCreativeModeTab {
+public class ModCreativeModeTabs {
 
     private static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister
             .create(Registries.CREATIVE_MODE_TAB, BedrockIsUnbreakable.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> BEDROCK_IS_UNBREAKABLE_ITEM_TAB = registerTab(
-            "bedrock_is_unbreakable_item_tab", ModItems.OBSIDIAN_INGOT,
-            List.of(ModItems.OBSIDIAN_INGOT, ModItems.CRYING_OBSIDIAN_INGOT, ModItems.OBSIDIAN_IRON_ALLOY,  ModItems.OBSIDIAN_STEEL,
-                    ModItems.OBSIDIAN_STICK, ModItems.OBSIDIAN_HANDLE, ModItems.OBSIDIAN_KNIFE, ModItems.OBSIDIAN_PICKAXE,
-                    ModItems.OBSIDIAN_STEEL_PICKAXE, ModItems.ONION, ModItems.SLICED_ONION, ModItems.PLAYER_TEARS,
-                    ModItems.BLUE_SLIME_BALL, ModItems.BLUE_SLIME_SPAWN_EGG));
+            "bedrock_is_unbreakable_item_tab", ModItems.OBSIDIAN_INGOT, ModItems.getAllItems());
 
-    public static final RegistryObject<CreativeModeTab> BEDROCK_IS_UNBREAKABLE_BLOCK_TAB = TABS
-            .register("bedrock_is_unbreakable_block_tab", () -> CreativeModeTab.builder().build());
+    public static final RegistryObject<CreativeModeTab> BEDROCK_IS_UNBREAKABLE_BLOCK_TAB = registerTab(
+            "bedrock_is_unbreakable_block_tab", ModBlocks.BLUE_SLIME_BLOCK.getBlockItem(),
+            ModBlocks.getCreativeModeTabBlockItems());
 
     public static void register(IEventBus eventBus) {
         TABS.register(eventBus);
@@ -40,7 +37,7 @@ public class ModCreativeModeTab {
                 }).build());
     }
 
-    private ModCreativeModeTab() {
+    private ModCreativeModeTabs() {
         super();
     }
 }
