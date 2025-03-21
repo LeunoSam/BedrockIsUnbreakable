@@ -21,10 +21,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
 
-    private ModItems() {
-        super();
-    }
-
     public static final DeferredRegister<Item> ITEMS = DeferredRegister
             .create(ForgeRegistries.ITEMS, BedrockIsUnbreakable.MOD_ID);
 
@@ -62,9 +58,7 @@ public class ModItems {
             () -> new KnifeItem(ModToolTiers.OBSIDIAN, 0, 3f, new Item.Properties(), 20));
 
     public static final RegistryObject<Item> OBSIDIAN_PICKAXE = create("obsidian_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.OBSIDIAN, 1, 0f, new Item.Properties())
-
-    );
+            () -> new PickaxeItem(ModToolTiers.OBSIDIAN, 1, 0f, new Item.Properties()));
 
     public static final RegistryObject<Item> OBSIDIAN_STEEL_PICKAXE = create(
             "obsidian_steel_pickaxe",
@@ -102,5 +96,9 @@ public class ModItems {
         RegistryObject<Item> itemObject = ITEMS.register(name, item);
         getAllItems().add(itemObject);
         return itemObject;
+    }
+
+    private ModItems() {
+        super();
     }
 }
