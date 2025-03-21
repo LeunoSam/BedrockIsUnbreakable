@@ -27,8 +27,8 @@
 	"block.bedrock_is_unbreakable.onion_grass": "Onion Grass",
 
 	// item groups of TBUI
-	"itemGroup.bedrock_is_unbreakable_item_tab": "This Bedrock Is Unbreakable Items!",
-	"itemGroup.bedrock_is_unbreakable_block_tab": "This Bedrock Is Unbreakable Blocks!",
+	"itemGroup.bedrock_is_unbreakable_item_tab": "This Bedrock Is Unbreakable! Items",
+	"itemGroup.bedrock_is_unbreakable_block_tab": "This Bedrock Is Unbreakable! Blocks",
 	
 	// tool tips of TBUI
 	"bedrock_is_unbreakable:press_shift": "Press Shift",

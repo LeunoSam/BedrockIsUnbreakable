@@ -5,6 +5,7 @@ import java.util.List;
 import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
 import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,6 +31,7 @@ public class ModCreativeModeTabs {
     private static RegistryObject<CreativeModeTab> registerTab(String name,
             RegistryObject<Item> icon, List<RegistryObject<Item>> items) {
         return TABS.register(name, () -> CreativeModeTab.builder()
+                .title(Component.translatable("itemGroup." + name))
                 .icon(() -> icon.get().getDefaultInstance()).displayItems((parameters, output) -> {
                     for (RegistryObject<Item> item : items) {
                         output.accept(item.get());
