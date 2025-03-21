@@ -12,10 +12,7 @@
         "minecraft:old_growth_birch_forest",
         "minecraft:dark_forest",
         "minecraft:swamp",
-        "minecraft:meadow",
-        "minecraft:savanna",
-        "minecraft:savanna_plateau",
-        "minecraft:windswept_savanna"
+        "minecraft:meadow"
     ],
   "features": "bedrock_is_unbreakable:onion_grass_placed",
   "step": "vegetal_decoration"
