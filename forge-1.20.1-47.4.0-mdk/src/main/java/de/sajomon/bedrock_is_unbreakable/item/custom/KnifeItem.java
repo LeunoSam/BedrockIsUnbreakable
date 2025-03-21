@@ -48,22 +48,7 @@ public class KnifeItem extends SwordItem {
     public InteractionResultHolder<ItemStack> use(Level level, Player player,
             InteractionHand hand) {
         if (!level.isClientSide && hand == InteractionHand.MAIN_HAND) {
-            Inventory i = player.getInventory();
-            int slot = i.findSlotMatchingItem(new ItemStack(ModItems.ONION.get()));
-            if (slot != -1) {
-                i.getItem(slot).shrink(1);
-                player.drop(new ItemStack(ModItems.SLICED_ONION.get(), 4), true);
-                if (rand.nextInt(100) + 1 <= pos) {
-                    i.add(new ItemStack(ModItems.PLAYER_TEARS.get()));
-                    
-                    // TODO: figure out Damage sources
-                    // player.hurt(DamageSource.sting(player), 1f);
-                    player.giveExperiencePoints(50);
-                }
-                player.getMainHandItem().hurtAndBreak(10, player,
-                        p41625 -> p41625.broadcastBreakEvent(hand));
-                player.getCooldowns().addCooldown(this, 5);
-            }
+            tryCuttingOnions(player, level, hand);
         }
         return super.use(level, player, hand);
     }
@@ -72,15 +57,45 @@ public class KnifeItem extends SwordItem {
     public void appendHoverText(ItemStack itemStack, Level level, List<Component> components,
             TooltipFlag tooltipFlag) {
         if (!Screen.hasShiftDown()) {
-            components.add(Component.translatable(
-                    ResourceLocation.fromNamespaceAndPath(BedrockIsUnbreakable.MOD_ID, "press_shift").toString())
-                    .withStyle(ChatFormatting.GRAY));
+            components
+                    .add(Component
+                            .translatable(ResourceLocation.fromNamespaceAndPath(
+                                    BedrockIsUnbreakable.MOD_ID, "press_shift").toString())
+                            .withStyle(ChatFormatting.GRAY));
         } else {
-            components.add(Component.translatable(
-                    ResourceLocation.fromNamespaceAndPath(BedrockIsUnbreakable.MOD_ID, "info_knife_item").toString())
-                    .withStyle(ChatFormatting.YELLOW));
+            components
+                    .add(Component
+                            .translatable(ResourceLocation.fromNamespaceAndPath(
+                                    BedrockIsUnbreakable.MOD_ID, "info_knife_item").toString())
+                            .withStyle(ChatFormatting.YELLOW));
         }
         super.appendHoverText(itemStack, level, components, tooltipFlag);
+    }
+
+    private void tryCuttingOnions(Player player, Level level, InteractionHand hand) {
+        Inventory inventory = player.getInventory();
+        int slot = inventory.findSlotMatchingItem(new ItemStack(ModItems.ONION.get()));
+        if (slot != -1) {
+            cutOnion(player, inventory, slot);
+            cryRandomly(player, inventory, level);
+            player.getMainHandItem().hurtAndBreak(10, player,
+                    p41625 -> p41625.broadcastBreakEvent(hand));
+            player.getCooldowns().addCooldown(this, 5);
+        }
+    }
+
+    private void cutOnion(Player player, Inventory inventory, int onionSlot) {
+        inventory.getItem(onionSlot).shrink(1);
+        player.drop(new ItemStack(ModItems.SLICED_ONION.get(), 4), true);
+    }
+
+    private void cryRandomly(Player player, Inventory inventory, Level level) {
+        if (rand.nextInt(100) + 1 > pos) {
+            return;
+        }
+        inventory.add(new ItemStack(ModItems.PLAYER_TEARS.get()));
+        player.hurt(level.damageSources().sting(player), 1f);
+        player.giveExperiencePoints(10);
     }
 
 }
