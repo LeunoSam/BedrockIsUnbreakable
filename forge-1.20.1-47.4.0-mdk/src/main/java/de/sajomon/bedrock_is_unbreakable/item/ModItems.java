@@ -28,11 +28,9 @@ public class ModItems {
     public static final RegistryObject<Item> OBSIDIAN_INGOT = create("obsidian_ingot",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> CRYING_OBSIDIAN_INGOT = ITEMS
-            .register("crying_obsidian_ingot", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CRYING_OBSIDIAN_INGOT = create("crying_obsidian_ingot", () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> OBSIDIAN_IRON_ALLOY = ITEMS
-            .register("obsidian_iron_alloy", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_IRON_ALLOY = create("obsidian_iron_alloy", () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> OBSIDIAN_STEEL = create("obsidian_steel",
             () -> new Item(new Item.Properties()));
@@ -75,8 +73,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     // spawn eggs
-    public static final RegistryObject<Item> BLUE_SLIME_SPAWN_EGG = ITEMS
-            .register("blue_slime_spawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.BLUE_SLIME,
+    public static final RegistryObject<Item> BLUE_SLIME_SPAWN_EGG = create("blue_slime_spawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.BLUE_SLIME,
                     984442, 4617149, new Item.Properties()));
 
     private static List<RegistryObject<Item>> allItems;
