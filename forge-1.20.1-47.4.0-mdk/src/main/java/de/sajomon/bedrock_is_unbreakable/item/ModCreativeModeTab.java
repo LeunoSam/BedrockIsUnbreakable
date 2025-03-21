@@ -3,6 +3,7 @@ package de.sajomon.bedrock_is_unbreakable.item;
 import java.util.List;
 
 import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
+import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -17,7 +18,10 @@ public class ModCreativeModeTab {
 
     public static final RegistryObject<CreativeModeTab> BEDROCK_IS_UNBREAKABLE_ITEM_TAB = registerTab(
             "bedrock_is_unbreakable_item_tab", ModItems.OBSIDIAN_INGOT,
-            List.of(ModItems.OBSIDIAN_INGOT));
+            List.of(ModItems.OBSIDIAN_INGOT, ModItems.CRYING_OBSIDIAN_INGOT, ModItems.OBSIDIAN_IRON_ALLOY,  ModItems.OBSIDIAN_STEEL,
+                    ModItems.OBSIDIAN_STICK, ModItems.OBSIDIAN_HANDLE, ModItems.OBSIDIAN_KNIFE, ModItems.OBSIDIAN_PICKAXE,
+                    ModItems.OBSIDIAN_STEEL_PICKAXE, ModItems.ONION, ModItems.SLICED_ONION, ModItems.PLAYER_TEARS,
+                    ModItems.BLUE_SLIME_BALL, ModItems.BLUE_SLIME_SPAWN_EGG));
 
     public static final RegistryObject<CreativeModeTab> BEDROCK_IS_UNBREAKABLE_BLOCK_TAB = TABS
             .register("bedrock_is_unbreakable_block_tab", () -> CreativeModeTab.builder().build());
