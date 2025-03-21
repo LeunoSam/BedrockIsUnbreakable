@@ -31,9 +31,6 @@ public class BedrockIsUnbreakable {
         ModEntityTypes.register(modEventBus);
         ModParticles.register(modEventBus);
         
-//        ModConfiguredFeatures.register(modEventBus);
-//        ModPlacedFeatures.register(modEventBus);
-
         MinecraftForge.EVENT_BUS.register(this);
     }
 
