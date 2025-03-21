@@ -1,10 +1,10 @@
 package de.sajomon.bedrock_is_unbreakable.entity.client;
 
+import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
 import net.minecraft.client.renderer.entity.EntityRendererProvider.Context;
+import net.minecraft.client.renderer.entity.SlimeRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.monster.Slime;
-import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
-import net.minecraft.client.renderer.entity.SlimeRenderer;
 
 public class BlueSlimeRenderer extends SlimeRenderer {
 
