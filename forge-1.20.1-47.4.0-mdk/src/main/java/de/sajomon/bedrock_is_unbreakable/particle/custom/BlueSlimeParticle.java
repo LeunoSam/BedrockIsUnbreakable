@@ -52,9 +52,12 @@ public class BlueSlimeParticle extends TextureSheetParticle {
             this.sprites = spriteSet;
         }
 
-        public Particle createParticle(SimpleParticleType particleType, ClientLevel level, double x,
-                double y, double z, double dx, double dy, double dz) {
-            return new BlueSlimeParticle(level, x, y, z, this.sprites, dx, dy, dz);
-        }
+	@Override
+	public Particle createParticle(SimpleParticleType type, ClientLevel level, double x,
+		double y, double z, double dx, double dy, double dz) {
+	    return new BlueSlimeParticle(level, x, y, z, this.sprites, dx, dy, dz);
+	}
+
+
     }
 }
