@@ -8,13 +8,13 @@ import net.minecraft.client.renderer.entity.SlimeRenderer;
 
 public class BlueSlimeRenderer extends SlimeRenderer {
 
-	public BlueSlimeRenderer(Context p_174391_) {
-		super(p_174391_);
-	}
-	
-	@Override
-	public ResourceLocation getTextureLocation(Slime p_115974_) {
-		return new ResourceLocation(BedrockIsUnbreakable.MOD_ID,
-				"textures/entity/slime/blue_slime.png");
-	}
+    public BlueSlimeRenderer(Context p_174391_) {
+        super(p_174391_);
+    }
+
+    @Override
+    public ResourceLocation getTextureLocation(Slime p_115974_) {
+        return ResourceLocation.fromNamespaceAndPath(BedrockIsUnbreakable.MOD_ID,
+                "textures/entity/slime/blue_slime.png");
+    }
 }

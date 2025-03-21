@@ -1,17 +1,20 @@
 package de.sajomon.bedrock_is_unbreakable;
 
+import org.slf4j.Logger;
+
 import com.mojang.logging.LogUtils;
 
 import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
+import de.sajomon.bedrock_is_unbreakable.datagen.DataGenerators;
+import de.sajomon.bedrock_is_unbreakable.entity.ModEntityTypes;
 import de.sajomon.bedrock_is_unbreakable.item.ModCreativeModeTab;
 import de.sajomon.bedrock_is_unbreakable.item.ModItems;
 import de.sajomon.bedrock_is_unbreakable.particle.ModParticles;
+import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
-import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(BedrockIsUnbreakable.MOD_ID)
@@ -25,8 +28,13 @@ public class BedrockIsUnbreakable {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModParticles.register(modEventBus);
         ModCreativeModeTab.register(modEventBus);
+
+        ModEntityTypes.register(modEventBus);
+        ModParticles.register(modEventBus);
+        
+//        ModConfiguredFeatures.register(modEventBus);
+//        ModPlacedFeatures.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }

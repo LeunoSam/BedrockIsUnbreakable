@@ -24,7 +24,8 @@ public class ModTags {
                 "needs_obsidian_steel_tool");
 
         private static TagKey<Block> tag(String name) {
-            return BlockTags.create(new ResourceLocation(BedrockIsUnbreakable.MOD_ID, name));
+            return BlockTags.create(
+                    ResourceLocation.fromNamespaceAndPath(BedrockIsUnbreakable.MOD_ID, name));
         }
     }
 

@@ -1,6 +1,7 @@
 package de.sajomon.bedrock_is_unbreakable.item;
 
 import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
+import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
 import de.sajomon.bedrock_is_unbreakable.entity.ModEntityTypes;
 import de.sajomon.bedrock_is_unbreakable.item.custom.KnifeItem;
 import de.sajomon.bedrock_is_unbreakable.item.custom.ObsidianSteelPickaxeItem;
