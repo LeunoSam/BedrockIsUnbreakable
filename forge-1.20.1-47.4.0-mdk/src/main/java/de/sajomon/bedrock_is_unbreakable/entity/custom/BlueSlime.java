@@ -25,8 +25,9 @@ public class BlueSlime extends Slime {
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return createMobAttributes().add(Attributes.ATTACK_DAMAGE, 1.0f).add(Attributes.MOVEMENT_SPEED, 0.5f)
-                .add(Attributes.ATTACK_SPEED, 1.0f).add(Attributes.MAX_HEALTH, 10.0);
+        return createMobAttributes().add(Attributes.ATTACK_DAMAGE, 1.0f)
+                .add(Attributes.MOVEMENT_SPEED, 0.5f).add(Attributes.ATTACK_SPEED, 1.0f)
+                .add(Attributes.MAX_HEALTH, 10.0);
     }
 
     public static boolean checkSpawnRules(EntityType<BlueSlime> entityType, ServerLevelAccessor level,
