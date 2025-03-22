@@ -22,8 +22,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
-            BedrockIsUnbreakable.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister
+            .create(ForgeRegistries.ITEMS, BedrockIsUnbreakable.MOD_ID);
 
     // ingot
     public static final RegistryObject<Item> OBSIDIAN_INGOT = create("obsidian_ingot",
@@ -53,8 +53,8 @@ public class ModItems {
     });
 
     public static final RegistryObject<Item> SLICED_ONION = create("sliced_onion", () -> {
-        Item newSlicedOnion = new Item(
-                new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build()));
+        Item newSlicedOnion = new Item(new Item.Properties()
+                .food(new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build()));
         ComposterBlock.COMPOSTABLES.put(newSlicedOnion.asItem(), 0.5f);
         return newSlicedOnion;
     });
@@ -65,15 +65,15 @@ public class ModItems {
 
     // tools
     public static final RegistryObject<Item> OBSIDIAN_KNIFE = create("obsidian_knife",
-            () -> new KnifeItem(ModToolTiers.OBSIDIAN, 0, 3f, new Item.Properties(), 20));
+            () -> new KnifeItem(ModToolTiers.OBSIDIAN, -1, -0.8f, new Item.Properties(), 20));
 
     public static final RegistryObject<Item> OBSIDIAN_PICKAXE = create("obsidian_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.OBSIDIAN, 1, 0f, new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.OBSIDIAN, 1, -2.8f, new Item.Properties()));
 
-    public static final RegistryObject<Item> OBSIDIAN_STEEL_PICKAXE = create("obsidian_steel_pickaxe",
-            () -> new ObsidianSteelPickaxeItem(ModToolTiers.OBSIDIAN_STEEL, 1, 0f, new Item.Properties())
-
-    );
+    public static final RegistryObject<Item> OBSIDIAN_STEEL_PICKAXE = create(
+            "obsidian_steel_pickaxe",
+            () -> new ObsidianSteelPickaxeItem(ModToolTiers.OBSIDIAN_STEEL, 1, -2.8f,
+                    new Item.Properties()));
 
     // player / mob drops
     public static final RegistryObject<Item> BLUE_SLIME_BALL = create("blue_slime_ball",
@@ -84,7 +84,8 @@ public class ModItems {
 
     // spawn eggs
     public static final RegistryObject<Item> BLUE_SLIME_SPAWN_EGG = create("blue_slime_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.BLUE_SLIME, 984442, 4617149, new Item.Properties()));
+            () -> new ForgeSpawnEggItem(ModEntityTypes.BLUE_SLIME, 984442, 4617149,
+                    new Item.Properties()));
 
     private static List<RegistryObject<Item>> allItems;
 
