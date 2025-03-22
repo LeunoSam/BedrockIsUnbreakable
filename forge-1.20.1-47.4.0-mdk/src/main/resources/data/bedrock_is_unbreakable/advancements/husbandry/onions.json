@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "bedrock_is_unbreakable:onion"
+    },
+    "title": {
+      "translate": "advancements.husbandry.onions.title"
+    },
+    "description": {
+      "translate": "advancements.husbandry.onions.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "bedrock_is_unbreakable:onions": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "bedrock_is_unbreakable:onions"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [],
+  "sends_telemetry_event": true
+}

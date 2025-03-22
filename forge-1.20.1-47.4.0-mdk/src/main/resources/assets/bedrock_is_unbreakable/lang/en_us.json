@@ -1,4 +1,10 @@
 {
+    // advancements of TBIU
+    "advancements.husbandry.onions.title": "Onions!",
+    "advancements.husbandry.onions.description": "Plant an onion.",
+    "advancements.husbandary.shedding_tears.title": "Shedding Tears",
+    "advancements.husbandary.shedding_tears.description": "Cut onions until you cry.",
+    
     // items of TBIU
     "item.bedrock_is_unbreakable.obsidian_ingot": "Obsidian Ingot",
     "item.bedrock_is_unbreakable.crying_obsidian_ingot": "Crying Obsidian Ingot",
