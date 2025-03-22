@@ -59,6 +59,10 @@ public class ModItems {
         return newSlicedOnion;
     });
 
+    public static final RegistryObject<Item> ONOION_BREAD = create("onion_bread",
+            () -> new Item(new Item.Properties()
+                    .food(new FoodProperties.Builder().nutrition(7).saturationMod(0.8f).build())));
+
     // tools
     public static final RegistryObject<Item> OBSIDIAN_KNIFE = create("obsidian_knife",
             () -> new KnifeItem(ModToolTiers.OBSIDIAN, 0, 3f, new Item.Properties(), 20));

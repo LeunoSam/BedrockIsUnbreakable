@@ -20,8 +20,9 @@
     "item.bedrock_is_unbreakable.blue_slime_ball": "blue Slimeball",
     "item.bedrock_is_unbreakable.obsidian_pickaxe": "Obsidian Pickaxe",
     "item.bedrock_is_unbreakable.obsidian_steel_pickaxe": "Obsidian Steel Pickaxe",
+    "item.bedrock_is_unbreakable.onion_bread": "Onion Bread",
 
-    // blocks of TBUI
+    // blocks of TBIU
     "block.bedrock_is_unbreakable.blue_slime_block": "Blue Slime Block",
     "block.bedrock_is_unbreakable.obsidian_block": "Block of Obsidian",
     "block.bedrock_is_unbreakable.obsidian_block_slab": "Obsidian Slab",
@@ -32,11 +33,11 @@
     "block.bedrock_is_unbreakable.onion_block": "Onion Crop",
     "block.bedrock_is_unbreakable.onion_grass": "Onion Grass",
 
-    // item groups of TBUI
-    "itemGroup.bedrock_is_unbreakable_item_tab": "This Bedrock Is Unbreakable! Items",
-    "itemGroup.bedrock_is_unbreakable_block_tab": "This Bedrock Is Unbreakable! Blocks",
+    // item groups of TBIU
+    "itemGroup.bedrock_is_unbreakable_item_tab": "TBIU! Items",
+    "itemGroup.bedrock_is_unbreakable_block_tab": "TBIU! Blocks",
 
-    // tool tips of TBUI
+    // tool tips of TBIU
     "bedrock_is_unbreakable:press_shift": "Press Shift",
     "bedrock_is_unbreakable:info_knife_item": "You can cut onions with a knife!"
 }
