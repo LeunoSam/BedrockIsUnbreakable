@@ -37,16 +37,14 @@ public class KnifeItem extends SwordItem {
      *                     possibility <= 0, there is a 0% chance, else if
      *                     possibility >= 100, there is a 100% chance.
      */
-    public KnifeItem(Tier tier, int attackDamage, float attackSpeed, Properties properties,
-            int possibility) {
+    public KnifeItem(Tier tier, int attackDamage, float attackSpeed, Properties properties, int possibility) {
         super(tier, attackDamage, attackSpeed, properties);
         this.possibility = possibility;
         rand = new Random();
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player,
-            InteractionHand hand) {
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide && hand == InteractionHand.MAIN_HAND) {
             tryCuttingOnions(player, level, hand);
         }
@@ -54,19 +52,18 @@ public class KnifeItem extends SwordItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack itemStack, Level level, List<Component> components,
-            TooltipFlag tooltipFlag) {
+    public void appendHoverText(ItemStack itemStack, Level level, List<Component> components, TooltipFlag tooltipFlag) {
         if (!Screen.hasShiftDown()) {
             components
                     .add(Component
-                            .translatable(ResourceLocation.fromNamespaceAndPath(
-                                    BedrockIsUnbreakable.MOD_ID, "press_shift").toString())
+                            .translatable(ResourceLocation
+                                    .fromNamespaceAndPath(BedrockIsUnbreakable.MOD_ID, "press_shift").toString())
                             .withStyle(ChatFormatting.GRAY));
         } else {
             components
                     .add(Component
-                            .translatable(ResourceLocation.fromNamespaceAndPath(
-                                    BedrockIsUnbreakable.MOD_ID, "info_knife_item").toString())
+                            .translatable(ResourceLocation
+                                    .fromNamespaceAndPath(BedrockIsUnbreakable.MOD_ID, "info_knife_item").toString())
                             .withStyle(ChatFormatting.YELLOW));
         }
         super.appendHoverText(itemStack, level, components, tooltipFlag);
@@ -78,8 +75,7 @@ public class KnifeItem extends SwordItem {
         if (slot != -1) {
             cutOnion(player, inventory, slot);
             cryRandomly(player, inventory, level);
-            player.getMainHandItem().hurtAndBreak(10, player,
-                    p41625 -> p41625.broadcastBreakEvent(hand));
+            player.getMainHandItem().hurtAndBreak(10, player, p41625 -> p41625.broadcastBreakEvent(hand));
             player.getCooldowns().addCooldown(this, 5);
         }
     }

@@ -12,8 +12,8 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class BlueSlimeParticle extends TextureSheetParticle {
 
-    protected BlueSlimeParticle(ClientLevel level, double xCord, double yCord, double zCord,
-            SpriteSet spriteSet, double xd, double yd, double zd) {
+    protected BlueSlimeParticle(ClientLevel level, double xCord, double yCord, double zCord, SpriteSet spriteSet,
+            double xd, double yd, double zd) {
         super(level, xCord, yCord, zCord, xd, yd, zd);
 
         this.friction = 0.5f;
@@ -52,12 +52,11 @@ public class BlueSlimeParticle extends TextureSheetParticle {
             this.sprites = spriteSet;
         }
 
-	@Override
-	public Particle createParticle(SimpleParticleType type, ClientLevel level, double x,
-		double y, double z, double dx, double dy, double dz) {
-	    return new BlueSlimeParticle(level, x, y, z, this.sprites, dx, dy, dz);
-	}
-
+        @Override
+        public Particle createParticle(SimpleParticleType type, ClientLevel level, double x, double y, double z,
+                double dx, double dy, double dz) {
+            return new BlueSlimeParticle(level, x, y, z, this.sprites, dx, dy, dz);
+        }
 
     }
 }

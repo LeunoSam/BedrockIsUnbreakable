@@ -15,12 +15,9 @@ public class ModEntityTypes {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister
             .create(ForgeRegistries.ENTITY_TYPES, BedrockIsUnbreakable.MOD_ID);
 
-    public static final RegistryObject<EntityType<BlueSlime>> BLUE_SLIME = ENTITY_TYPES.register(
-            "blue_slime",
-            () -> EntityType.Builder.of(BlueSlime::new, MobCategory.MONSTER).sized(2f, 2f)
-                    .build(ResourceLocation
-                            .fromNamespaceAndPath(BedrockIsUnbreakable.MOD_ID, "blue_slime")
-                            .toString()));
+    public static final RegistryObject<EntityType<BlueSlime>> BLUE_SLIME = ENTITY_TYPES.register("blue_slime",
+            () -> EntityType.Builder.of(BlueSlime::new, MobCategory.MONSTER).sized(2f, 2f).build(
+                    ResourceLocation.fromNamespaceAndPath(BedrockIsUnbreakable.MOD_ID, "blue_slime").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

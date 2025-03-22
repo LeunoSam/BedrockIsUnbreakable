@@ -26,8 +26,7 @@ public class ModToolTiers {
         OBSIDIAN_STEEL = TierSortingRegistry.registerTier(
                 new ForgeTier(6, 2500, 12f, 4f, 20, ModTags.Blocks.NEEDS_OBSIDIAN_STEEL_TOOL,
                         () -> Ingredient.of(ModItems.OBSIDIAN_STEEL.get())),
-                ResourceLocation.fromNamespaceAndPath(BedrockIsUnbreakable.MOD_ID,
-                        "obsidian_steel"),
+                ResourceLocation.fromNamespaceAndPath(BedrockIsUnbreakable.MOD_ID, "obsidian_steel"),
                 List.of(ModToolTiers.OBSIDIAN), List.of());
     }
 

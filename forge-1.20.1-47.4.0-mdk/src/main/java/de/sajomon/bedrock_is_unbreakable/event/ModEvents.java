@@ -19,52 +19,47 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 @Mod.EventBusSubscriber(modid = BedrockIsUnbreakable.MOD_ID)
 public class ModEvents {
 
-	private ModEvents() {
-		super();
-	}
+    private ModEvents() {
+        super();
+    }
 
-	@Mod.EventBusSubscriber(modid = BedrockIsUnbreakable.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-	public static class ModEventBusEvents {
+    @Mod.EventBusSubscriber(modid = BedrockIsUnbreakable.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class ModEventBusEvents {
 
-		private ModEventBusEvents() {
-			super();
-		}
+        private ModEventBusEvents() {
+            super();
+        }
 
-		@SubscribeEvent
-		public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-			event.put(ModEntityTypes.BLUE_SLIME.get(), BlueSlime.createAttributes().build());
-		}
+        @SubscribeEvent
+        public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
+            event.put(ModEntityTypes.BLUE_SLIME.get(), BlueSlime.createAttributes().build());
+        }
 
-		@SuppressWarnings("deprecation")
-		@SubscribeEvent
-		public static void commonSetup(FMLCommonSetupEvent event) {		
-			event.enqueueWork(() ->
-			SpawnPlacements.register(
-					ModEntityTypes.BLUE_SLIME.get(),
-					SpawnPlacements.Type.ON_GROUND, 
-					Heightmap.Types.WORLD_SURFACE, 
-					BlueSlime::checkSpawnRules)
-					);
-		}
-	}
+        @SuppressWarnings("deprecation")
+        @SubscribeEvent
+        public static void commonSetup(FMLCommonSetupEvent event) {
+            event.enqueueWork(() -> SpawnPlacements.register(ModEntityTypes.BLUE_SLIME.get(),
+                    SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE, BlueSlime::checkSpawnRules));
+        }
+    }
 
-	@Mod.EventBusSubscriber(modid = BedrockIsUnbreakable.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-	public static class ClientModEvents {
+    @Mod.EventBusSubscriber(modid = BedrockIsUnbreakable.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
 
-	    private ClientModEvents() {
-		super();
-	    }
+        private ClientModEvents() {
+            super();
+        }
 
-	    @SubscribeEvent
-	    public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
-		event.registerEntityRenderer(ModEntityTypes.BLUE_SLIME.get(), BlueSlimeRenderer::new);
-	    }
-	    
-	    @SubscribeEvent
-	    public static void registerParticle(RegisterParticleProvidersEvent event) {
-		event.registerSpriteSet(ModParticles.BLUE_SLIME_PARTICLES.get(), BlueSlimeParticle.Provider::new);
-	    }
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerEntityRenderer(ModEntityTypes.BLUE_SLIME.get(), BlueSlimeRenderer::new);
+        }
 
-	}
+        @SubscribeEvent
+        public static void registerParticle(RegisterParticleProvidersEvent event) {
+            event.registerSpriteSet(ModParticles.BLUE_SLIME_PARTICLES.get(), BlueSlimeParticle.Provider::new);
+        }
+
+    }
 
 }

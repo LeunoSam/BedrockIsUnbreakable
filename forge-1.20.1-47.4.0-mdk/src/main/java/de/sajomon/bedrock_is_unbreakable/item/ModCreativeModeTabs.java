@@ -14,8 +14,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModCreativeModeTabs {
 
-    private static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister
-            .create(Registries.CREATIVE_MODE_TAB, BedrockIsUnbreakable.MOD_ID);
+    private static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB,
+            BedrockIsUnbreakable.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> BEDROCK_IS_UNBREAKABLE_ITEM_TAB = registerTab(
             "bedrock_is_unbreakable_item_tab", ModItems.OBSIDIAN_INGOT, ModItems.getAllItems());
@@ -28,10 +28,9 @@ public class ModCreativeModeTabs {
         TABS.register(eventBus);
     }
 
-    private static RegistryObject<CreativeModeTab> registerTab(String name,
-            RegistryObject<Item> icon, List<RegistryObject<Item>> items) {
-        return TABS.register(name, () -> CreativeModeTab.builder()
-                .title(Component.translatable("itemGroup." + name))
+    private static RegistryObject<CreativeModeTab> registerTab(String name, RegistryObject<Item> icon,
+            List<RegistryObject<Item>> items) {
+        return TABS.register(name, () -> CreativeModeTab.builder().title(Component.translatable("itemGroup." + name))
                 .icon(() -> icon.get().getDefaultInstance()).displayItems((parameters, output) -> {
                     for (RegistryObject<Item> item : items) {
                         output.accept(item.get());

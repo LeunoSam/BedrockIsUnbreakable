@@ -12,30 +12,25 @@ import net.minecraft.world.phys.Vec3;
 
 public class ObsidianSteelPickaxeItem extends PickaxeItem {
 
-    public ObsidianSteelPickaxeItem(Tier tier, int attackDamage, float attackSpeed,
-            Properties props) {
+    public ObsidianSteelPickaxeItem(Tier tier, int attackDamage, float attackSpeed, Properties props) {
         super(tier, attackDamage, attackSpeed, props);
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player,
-            InteractionHand hand) {
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide && hand == InteractionHand.MAIN_HAND) {
             Vec3 direction = player.getViewVector(0).scale(0.01);
             Vec3 eyes = player.getEyePosition(0);
             Vec3 location = eyes.add(direction);
 
             // selects first non-air-block within 4 blocks
-            while (level.getBlockState(BlockPos.containing(location.x, location.y, location.z))
-                    .toString().equals("Block{minecraft:air}")
-                    && absVec3(substractVec3(eyes, location)) <= 4) {
+            while (level.getBlockState(BlockPos.containing(location.x, location.y, location.z)).toString()
+                    .equals("Block{minecraft:air}") && absVec3(substractVec3(eyes, location)) <= 4) {
                 location = location.add(direction);
             }
-            if (level.destroyBlock(BlockPos.containing(location.x, location.y, location.z),
-                    false)) {
+            if (level.destroyBlock(BlockPos.containing(location.x, location.y, location.z), false)) {
                 player.getCooldowns().addCooldown(this, 5);
-                player.getMainHandItem().hurtAndBreak(10, player,
-                        p41625 -> p41625.broadcastBreakEvent(hand));
+                player.getMainHandItem().hurtAndBreak(10, player, p41625 -> p41625.broadcastBreakEvent(hand));
             }
         }
 

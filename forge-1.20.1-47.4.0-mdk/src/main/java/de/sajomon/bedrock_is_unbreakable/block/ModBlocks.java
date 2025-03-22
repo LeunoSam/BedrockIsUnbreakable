@@ -21,39 +21,33 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlocks {
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister
-            .create(ForgeRegistries.BLOCKS, BedrockIsUnbreakable.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
+            BedrockIsUnbreakable.MOD_ID);
 
-    public static final ModBlock OBSIDIAN_BLOCK = create("obsidian_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(275f)
-                    .requiresCorrectToolForDrops().explosionResistance(2000f)));
+    public static final ModBlock OBSIDIAN_BLOCK = create("obsidian_block", () -> new Block(BlockBehaviour.Properties
+            .copy(Blocks.STONE).strength(275f).requiresCorrectToolForDrops().explosionResistance(2000f)));
 
     public static final ModBlock OBSIDIAN_BLOCK_STAIRS = create("obsidian_block_stairs",
-            () -> new StairBlock(() -> OBSIDIAN_BLOCK.getBlock().get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE).strength(275f)
-                            .requiresCorrectToolForDrops().explosionResistance(2000f)));
+            () -> new StairBlock(() -> OBSIDIAN_BLOCK.getBlock().get().defaultBlockState(), BlockBehaviour.Properties
+                    .copy(Blocks.STONE).strength(275f).requiresCorrectToolForDrops().explosionResistance(2000f)));
 
     public static final ModBlock OBSIDIAN_BLOCK_SLAB = create("obsidian_block_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(275f)
                     .requiresCorrectToolForDrops().explosionResistance(2000f)));
 
-    public static final ModBlock OBSIDIAN_BRICK = create("obsidian_brick",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(275f)
-                    .requiresCorrectToolForDrops().explosionResistance(2000f)));
+    public static final ModBlock OBSIDIAN_BRICK = create("obsidian_brick", () -> new Block(BlockBehaviour.Properties
+            .copy(Blocks.STONE).strength(275f).requiresCorrectToolForDrops().explosionResistance(2000f)));
 
     public static final ModBlock OBSIDIAN_BRICK_STAIRS = create("obsidian_brick_stairs",
-            () -> new StairBlock(() -> OBSIDIAN_BRICK.getBlock().get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE).strength(275f)
-                            .requiresCorrectToolForDrops().explosionResistance(2000f)));
+            () -> new StairBlock(() -> OBSIDIAN_BRICK.getBlock().get().defaultBlockState(), BlockBehaviour.Properties
+                    .copy(Blocks.STONE).strength(275f).requiresCorrectToolForDrops().explosionResistance(2000f)));
 
     public static final ModBlock OBSIDIAN_BRICK_SLAB = create("obsidian_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(275f)
                     .requiresCorrectToolForDrops().explosionResistance(2000f)));
 
     public static final ModBlock ONION_BLOCK = create("onions",
-            () -> new OnionBlock(
-                    BlockBehaviour.Properties.copy(Blocks.POTATOES).noOcclusion().noCollission()),
-            false);
+            () -> new OnionBlock(BlockBehaviour.Properties.copy(Blocks.POTATOES).noOcclusion().noCollission()), false);
 
     public static final ModBlock BLUE_SLIME_BLOCK = create("blue_slime_block",
             () -> new BlueSlimeBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK)));
@@ -86,8 +80,7 @@ public class ModBlocks {
         return create(name, block, true);
     }
 
-    private static <T extends Block> ModBlock create(String name, Supplier<T> block,
-            boolean hasItem) {
+    private static <T extends Block> ModBlock create(String name, Supplier<T> block, boolean hasItem) {
         ModBlock modBlock = new ModBlock(name, block, hasItem);
         getAllBlocks().add(modBlock);
         if (hasItem) {

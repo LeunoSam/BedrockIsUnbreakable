@@ -13,6 +13,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -21,16 +22,18 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister
-            .create(ForgeRegistries.ITEMS, BedrockIsUnbreakable.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
+            BedrockIsUnbreakable.MOD_ID);
 
     // ingot
     public static final RegistryObject<Item> OBSIDIAN_INGOT = create("obsidian_ingot",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> CRYING_OBSIDIAN_INGOT = create("crying_obsidian_ingot", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CRYING_OBSIDIAN_INGOT = create("crying_obsidian_ingot",
+            () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> OBSIDIAN_IRON_ALLOY = create("obsidian_iron_alloy", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_IRON_ALLOY = create("obsidian_iron_alloy",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> OBSIDIAN_STEEL = create("obsidian_steel",
             () -> new Item(new Item.Properties()));
@@ -42,14 +45,19 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     // food
-    public static final RegistryObject<Item> ONION = create("onion",
-            () -> new ItemNameBlockItem(ModBlocks.ONION_BLOCK.getBlock().get(),
-                    new Item.Properties()));
+    public static final RegistryObject<Item> ONION = create("onion", () -> {
+        ItemNameBlockItem newOnion = new ItemNameBlockItem(ModBlocks.ONION_BLOCK.getBlock().get(),
+                new Item.Properties());
+        ComposterBlock.COMPOSTABLES.put(newOnion.asItem(), 0.65f);
+        return newOnion;
+    });
 
-    public static final RegistryObject<Item> SLICED_ONION = create("sliced_onion",
-            () -> new Item(new Item.Properties()
-
-                    .food(new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+    public static final RegistryObject<Item> SLICED_ONION = create("sliced_onion", () -> {
+        Item newSlicedOnion = new Item(
+                new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build()));
+        ComposterBlock.COMPOSTABLES.put(newSlicedOnion.asItem(), 0.5f);
+        return newSlicedOnion;
+    });
 
     // tools
     public static final RegistryObject<Item> OBSIDIAN_KNIFE = create("obsidian_knife",
@@ -58,10 +66,8 @@ public class ModItems {
     public static final RegistryObject<Item> OBSIDIAN_PICKAXE = create("obsidian_pickaxe",
             () -> new PickaxeItem(ModToolTiers.OBSIDIAN, 1, 0f, new Item.Properties()));
 
-    public static final RegistryObject<Item> OBSIDIAN_STEEL_PICKAXE = create(
-            "obsidian_steel_pickaxe",
-            () -> new ObsidianSteelPickaxeItem(ModToolTiers.OBSIDIAN_STEEL, 1, 0f,
-                    new Item.Properties())
+    public static final RegistryObject<Item> OBSIDIAN_STEEL_PICKAXE = create("obsidian_steel_pickaxe",
+            () -> new ObsidianSteelPickaxeItem(ModToolTiers.OBSIDIAN_STEEL, 1, 0f, new Item.Properties())
 
     );
 
@@ -73,8 +79,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     // spawn eggs
-    public static final RegistryObject<Item> BLUE_SLIME_SPAWN_EGG = create("blue_slime_spawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.BLUE_SLIME,
-                    984442, 4617149, new Item.Properties()));
+    public static final RegistryObject<Item> BLUE_SLIME_SPAWN_EGG = create("blue_slime_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.BLUE_SLIME, 984442, 4617149, new Item.Properties()));
 
     private static List<RegistryObject<Item>> allItems;
 

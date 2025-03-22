@@ -31,8 +31,7 @@ public class ModBlock {
     }
 
     private void registerBlockItem() {
-        blockItem = ModItems.ITEMS.register(name,
-                () -> new BlockItem(block.get(), new Item.Properties()));
+        blockItem = ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public RegistryObject<Block> getBlock() {

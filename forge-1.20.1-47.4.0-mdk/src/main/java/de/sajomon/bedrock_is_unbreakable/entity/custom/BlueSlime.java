@@ -23,17 +23,14 @@ public class BlueSlime extends Slime {
     protected ParticleOptions getParticleType() {
         return ModParticles.BLUE_SLIME_PARTICLES.get();
     }
-    
+
     public static AttributeSupplier.Builder createAttributes() {
-        return createMobAttributes()
-        	.add(Attributes.ATTACK_DAMAGE, 1.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.5f)
-                .add(Attributes.ATTACK_SPEED, 1.0f)
-                .add(Attributes.MAX_HEALTH, 10.0);
+        return createMobAttributes().add(Attributes.ATTACK_DAMAGE, 1.0f).add(Attributes.MOVEMENT_SPEED, 0.5f)
+                .add(Attributes.ATTACK_SPEED, 1.0f).add(Attributes.MAX_HEALTH, 10.0);
     }
 
-    public static boolean checkSpawnRules(EntityType<BlueSlime> entityType,
-            ServerLevelAccessor level, MobSpawnType spawnType, BlockPos pos, RandomSource random) {
+    public static boolean checkSpawnRules(EntityType<BlueSlime> entityType, ServerLevelAccessor level,
+            MobSpawnType spawnType, BlockPos pos, RandomSource random) {
         if (spawnType == MobSpawnType.SPAWNER || spawnType == MobSpawnType.SPAWN_EGG) {
             return true;
         } else {

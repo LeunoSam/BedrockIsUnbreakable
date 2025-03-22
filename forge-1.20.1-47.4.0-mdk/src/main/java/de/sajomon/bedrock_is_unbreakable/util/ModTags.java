@@ -20,12 +20,10 @@ public class ModTags {
 
         public static final TagKey<Block> NEEDS_OBSIDIAN_TOOL = tag("needs_obsidian_tool");
 
-        public static final TagKey<Block> NEEDS_OBSIDIAN_STEEL_TOOL = tag(
-                "needs_obsidian_steel_tool");
+        public static final TagKey<Block> NEEDS_OBSIDIAN_STEEL_TOOL = tag("needs_obsidian_steel_tool");
 
         private static TagKey<Block> tag(String name) {
-            return BlockTags.create(
-                    ResourceLocation.fromNamespaceAndPath(BedrockIsUnbreakable.MOD_ID, name));
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(BedrockIsUnbreakable.MOD_ID, name));
         }
     }
 
