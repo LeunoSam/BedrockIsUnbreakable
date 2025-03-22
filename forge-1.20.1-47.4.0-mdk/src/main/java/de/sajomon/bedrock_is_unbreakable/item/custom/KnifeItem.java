@@ -21,7 +21,7 @@ import net.minecraft.world.level.Level;
 
 public class KnifeItem extends SwordItem {
 
-    private int pos;
+    private int possibility;
     private Random rand;
 
     /**
@@ -40,7 +40,7 @@ public class KnifeItem extends SwordItem {
     public KnifeItem(Tier tier, int attackDamage, float attackSpeed, Properties properties,
             int possibility) {
         super(tier, attackDamage, attackSpeed, properties);
-        this.pos = possibility;
+        this.possibility = possibility;
         rand = new Random();
     }
 
@@ -90,12 +90,12 @@ public class KnifeItem extends SwordItem {
     }
 
     private void cryRandomly(Player player, Inventory inventory, Level level) {
-        if (rand.nextInt(100) + 1 > pos) {
+        if (rand.nextInt(100) + 1 > possibility) {
             return;
         }
         inventory.add(new ItemStack(ModItems.PLAYER_TEARS.get()));
         player.hurt(level.damageSources().sting(player), 1f);
-        player.giveExperiencePoints(10);
+        player.giveExperiencePoints(2);
     }
 
 }
