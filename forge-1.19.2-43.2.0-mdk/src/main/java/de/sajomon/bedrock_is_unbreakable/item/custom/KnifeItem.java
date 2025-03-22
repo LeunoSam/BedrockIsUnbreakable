@@ -53,7 +53,7 @@ public class KnifeItem extends SwordItem {
 				if(rand.nextInt(100)+1 <= pos) {
 					i.add(new ItemStack(ModItems.PLAYER_TEARS.get()));
 					player.hurt(DamageSource.sting(player), 1f);
-					player.giveExperiencePoints(50);
+					player.giveExperiencePoints(2);
 				}
 				player.getMainHandItem().hurtAndBreak(10, player, p41625 ->
 					p41625.broadcastBreakEvent(hand)
