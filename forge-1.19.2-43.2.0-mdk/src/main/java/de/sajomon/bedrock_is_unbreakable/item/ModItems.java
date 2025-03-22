@@ -58,17 +58,17 @@ public class ModItems {
 
     // tools
     public static final RegistryObject<Item> OBSIDIAN_KNIFE = ITEMS.register("obsidian_knife",
-            () -> new KnifeItem(ModToolTiers.OBSIDIAN, 0, 3f,
+            () -> new KnifeItem(ModToolTiers.OBSIDIAN, -1, -0.8f,
                     new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB), 20));
 
     public static final RegistryObject<Item> OBSIDIAN_PICKAXE = ITEMS.register("obsidian_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.OBSIDIAN, 1, 0f,
+            () -> new PickaxeItem(ModToolTiers.OBSIDIAN, 1, -2.8f,
                     new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
 
     );
 
     public static final RegistryObject<Item> OBSIDIAN_STEEL_PICKAXE = ITEMS.register("obsidian_steel_pickaxe",
-            () -> new ObsidianSteelPickaxeItem(ModToolTiers.OBSIDIAN_STEEL, 1, 0f,
+            () -> new ObsidianSteelPickaxeItem(ModToolTiers.OBSIDIAN_STEEL, 1, -2.8f,
                     new Item.Properties().tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB))
 
     );
