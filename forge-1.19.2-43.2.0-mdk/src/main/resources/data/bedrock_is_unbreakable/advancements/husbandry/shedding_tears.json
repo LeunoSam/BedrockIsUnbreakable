@@ -3,12 +3,18 @@
     "icon": {
       "item": "bedrock_is_unbreakable:player_tears"
     },
-    "title": "Shedding Tears",
-    "description": "Cut onions until you cry.",
+    "title": {
+      "translate": "advancements.husbandary.shedding_tears.title"
+    },
+    "description": {
+      "translate": "advancements.husbandary.shedding_tears.description"
+    },
+    "frame": "task",
+    "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "bedrock_is_unbreakable:onions",
+  "parent": "bedrock_is_unbreakable:husbandry/onions",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
@@ -22,5 +28,6 @@
         ]
       }
     }
-  }
+  },
+  "sends_telemetry_event": true
 }

@@ -3,8 +3,14 @@
     "icon": {
       "item": "bedrock_is_unbreakable:onion"
     },
-    "title": "Onions!",
-    "description": "Plant an onion.",
+    "title": {
+      "translate": "advancements.husbandry.onions.title"
+    },
+    "description": {
+      "translate": "advancements.husbandry.onions.description"
+    },
+    "frame": "task",
+    "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
@@ -16,5 +22,6 @@
         "block": "bedrock_is_unbreakable:onions"
       }
     }
-  }
+  },
+  "sends_telemetry_event": true
 }
