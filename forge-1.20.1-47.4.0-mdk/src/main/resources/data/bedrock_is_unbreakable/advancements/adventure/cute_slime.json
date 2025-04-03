@@ -4,10 +4,10 @@
       "item": "bedrock_is_unbreakable:blue_slime_ball"
     },
     "title": {
-      "translate": "advancements.recipes.cute_slime.title"
+      "translate": "advancements.adventure.cute_slime.title"
     },
     "description": {
-      "translate": "advancements.recipes.cute_slime.description"
+      "translate": "advancements.adventure.cute_slime.description"
     },
     "frame": "task",
     "show_toast": true,
@@ -31,6 +31,5 @@
       }
     }
   },
-  "requirements": [],
   "sends_telemetry_event": true
 }
