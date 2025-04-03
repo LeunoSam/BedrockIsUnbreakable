@@ -4,7 +4,13 @@
     "advancements.husbandry.onions.description": "Plant an onion.",
     "advancements.husbandary.shedding_tears.title": "Shedding Tears",
     "advancements.husbandary.shedding_tears.description": "Cut onions until you cry.",
-    
+    "advancements.recipes.cute_slime.title": "Cute blue slimes",
+    "advancements.recipes.cute_slime.description": "Kill a blue slime :(.",
+    "advancements.recipes.almost_done.title": "Almost done!",
+    "advancements.recipes.almost_done.description": "The one steel to rule them all!",
+    "advancements.story.destroyer_of_worlds.title": "Destroyer of Worlds",
+    "advancements.story.destroyer_of_worlds.description": "Now I am become Death, the destroyer of worlds! - Oppenheimer",
+
     // items of TBIU
     "item.bedrock_is_unbreakable.obsidian_ingot": "Obsidian Ingot",
     "item.bedrock_is_unbreakable.crying_obsidian_ingot": "Crying Obsidian Ingot",

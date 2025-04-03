@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "bedrock_is_unbreakable:obsidian_steel"
+    },
+    "title": {
+      "translate": "advancements.recipes.almost_done.title"
+    },
+    "description": {
+      "translate": "advancements.recipes.almost_done.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:story/mine_diamond",
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "bedrock_is_unbreakable:obsidian_steel_from_blasting_obsidian_iron_alloy",
+        "ingredients": []
+      }
+    }
+  },
+  "requirements": [],
+  "sends_telemetry_event": true
+}
