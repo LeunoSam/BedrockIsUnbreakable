@@ -12,7 +12,11 @@
         "minecraft:old_growth_birch_forest",
         "minecraft:dark_forest",
         "minecraft:swamp",
-        "minecraft:meadow"
+        "minecraft:meadow",
+        "minecraft:snowy_slopes",
+        "minecraft:grove",
+        "minecraft:jagged_peaks",
+        "minecraft:frozen_peaks"
     ],
     "spawners": {
         "type": "bedrock_is_unbreakable:blue_slime",
