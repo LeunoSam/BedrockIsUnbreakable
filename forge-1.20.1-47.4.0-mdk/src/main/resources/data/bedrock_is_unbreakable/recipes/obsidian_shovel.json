@@ -1,0 +1,24 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"#": {
+			"item": "bedrock_is_unbreakable:obsidian_handle"
+		},
+		"*": {
+			"item": "bedrock_is_unbreakable:obsidian_ingot"
+		},
+		"+": {
+			"item": "bedrock_is_unbreakable:blue_slime_ball"
+		}
+		
+	},
+	"pattern": [
+		"*",
+		"+",
+		"#"
+	],
+	"result": {
+		"count": 1,
+		"item": "bedrock_is_unbreakable:obsidian_shovel"
+	}
+}
