@@ -10,9 +10,12 @@ import de.sajomon.bedrock_is_unbreakable.entity.ModEntityTypes;
 import de.sajomon.bedrock_is_unbreakable.item.custom.KnifeItem;
 import de.sajomon.bedrock_is_unbreakable.item.custom.ObsidianSteelPickaxeItem;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -67,8 +70,17 @@ public class ModItems {
     public static final RegistryObject<Item> OBSIDIAN_KNIFE = create("obsidian_knife",
             () -> new KnifeItem(ModToolTiers.OBSIDIAN, -1, -0.8f, new Item.Properties(), 20));
 
+    public static final RegistryObject<Item> OBSIDIAN_HOE = create("obsidian_hoe",
+            () -> new HoeItem(ModToolTiers.OBSIDIAN, -4, 0f, new Item.Properties()));
+
+    public static final RegistryObject<Item> OBSIDIAN_AXE = create("obsidian_axe",
+            () -> new AxeItem(ModToolTiers.OBSIDIAN, 4f, -3f, new Item.Properties()));
+
+    public static final RegistryObject<Item> OBSIDIAN_SHOVEL = create("obsidian_shovel",
+            () -> new ShovelItem(ModToolTiers.OBSIDIAN, 0.5f, -3f, new Item.Properties()));
+
     public static final RegistryObject<Item> OBSIDIAN_PICKAXE = create("obsidian_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.OBSIDIAN, 1, -2.8f, new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.OBSIDIAN, 0, -2.8f, new Item.Properties()));
 
     public static final RegistryObject<Item> OBSIDIAN_STEEL_PICKAXE = create(
             "obsidian_steel_pickaxe",
