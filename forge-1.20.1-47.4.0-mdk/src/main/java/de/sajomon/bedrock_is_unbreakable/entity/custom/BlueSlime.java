@@ -15,8 +15,8 @@ import net.minecraft.world.level.ServerLevelAccessor;
 
 public class BlueSlime extends Slime {
 
-    public BlueSlime(EntityType<? extends Slime> p_33588_, Level p_33589_) {
-        super(p_33588_, p_33589_);
+    public BlueSlime(EntityType<? extends Slime> entityType, Level level) {
+        super(entityType, level);
     }
 
     @Override
