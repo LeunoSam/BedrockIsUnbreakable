@@ -62,7 +62,7 @@ public class ModItems {
         return newSlicedOnion;
     });
 
-    public static final RegistryObject<Item> ONOION_BREAD = create("onion_bread",
+    public static final RegistryObject<Item> ONION_BREAD = create("onion_bread",
             () -> new Item(new Item.Properties()
                     .food(new FoodProperties.Builder().nutrition(7).saturationMod(0.8f).build())));
 

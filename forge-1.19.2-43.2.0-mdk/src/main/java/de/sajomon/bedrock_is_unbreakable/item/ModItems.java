@@ -62,7 +62,7 @@ public class ModItems {
                     .tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)
                     .food(new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
 
-    public static final RegistryObject<Item> ONOION_BREAD = ITEMS.register("onion_bread",
+    public static final RegistryObject<Item> ONION_BREAD = ITEMS.register("onion_bread",
             () -> new Item(new Item.Properties()
                     .tab(ModCreativeModeTab.BEDROCK_IS_UNBREAKABLE_ITEM_TAB)
                     .food(new FoodProperties.Builder().nutrition(7).saturationMod(0.8f).build())));
