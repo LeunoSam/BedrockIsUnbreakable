@@ -9,6 +9,8 @@ import de.sajomon.bedrock_is_unbreakable.entity.ModEntityTypes;
 import de.sajomon.bedrock_is_unbreakable.item.ModCreativeModeTabs;
 import de.sajomon.bedrock_is_unbreakable.item.ModItems;
 import de.sajomon.bedrock_is_unbreakable.particle.ModParticles;
+import de.sajomon.bedrock_is_unbreakable.potions.ModPotions;
+import de.sajomon.bedrock_is_unbreakable.world.effect.ModMobEffects;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -27,6 +29,9 @@ public class BedrockIsUnbreakable {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+
+        ModMobEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         ModEntityTypes.register(modEventBus);
         ModParticles.register(modEventBus);

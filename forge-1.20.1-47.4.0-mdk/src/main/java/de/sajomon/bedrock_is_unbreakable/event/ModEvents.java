@@ -6,6 +6,7 @@ import de.sajomon.bedrock_is_unbreakable.entity.client.BlueSlimeRenderer;
 import de.sajomon.bedrock_is_unbreakable.entity.custom.BlueSlime;
 import de.sajomon.bedrock_is_unbreakable.particle.ModParticles;
 import de.sajomon.bedrock_is_unbreakable.particle.custom.BlueSlimeParticle;
+import de.sajomon.bedrock_is_unbreakable.potions.ModBrewingRecipes;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.api.distmarker.Dist;
@@ -38,8 +39,12 @@ public class ModEvents {
         @SuppressWarnings("deprecation")
         @SubscribeEvent
         public static void commonSetup(FMLCommonSetupEvent event) {
-            event.enqueueWork(() -> SpawnPlacements.register(ModEntityTypes.BLUE_SLIME.get(),
-                    SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE, BlueSlime::checkSpawnRules));
+            event.enqueueWork(() -> {
+                SpawnPlacements.register(ModEntityTypes.BLUE_SLIME.get(),
+                        SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE,
+                        BlueSlime::checkSpawnRules);
+                ModBrewingRecipes.setup();
+            });
         }
     }
 
@@ -57,7 +62,8 @@ public class ModEvents {
 
         @SubscribeEvent
         public static void registerParticle(RegisterParticleProvidersEvent event) {
-            event.registerSpriteSet(ModParticles.BLUE_SLIME_PARTICLES.get(), BlueSlimeParticle.Provider::new);
+            event.registerSpriteSet(ModParticles.BLUE_SLIME_PARTICLES.get(),
+                    BlueSlimeParticle.Provider::new);
         }
 
     }

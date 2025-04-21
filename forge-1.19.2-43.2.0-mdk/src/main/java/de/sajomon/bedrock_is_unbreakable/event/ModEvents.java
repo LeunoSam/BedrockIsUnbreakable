@@ -7,6 +7,7 @@ import de.sajomon.bedrock_is_unbreakable.entity.client.BlueSlimeRenderer;
 import de.sajomon.bedrock_is_unbreakable.entity.custom.BlueSlime;
 import de.sajomon.bedrock_is_unbreakable.particle.ModParticles;
 import de.sajomon.bedrock_is_unbreakable.particle.custom.BlueSlimeParticle;
+import de.sajomon.bedrock_is_unbreakable.potions.ModBrewingRecipes;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -23,60 +24,61 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 @Mod.EventBusSubscriber(modid = BedrockIsUnbreakable.MOD_ID)
 public class ModEvents {
 
-	private ModEvents() {
-		super();
-	}
+    private ModEvents() {
+        super();
+    }
 
-	@Mod.EventBusSubscriber(modid = BedrockIsUnbreakable.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-	public static class ModEventBusEvents {
+    @Mod.EventBusSubscriber(modid = BedrockIsUnbreakable.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class ModEventBusEvents {
 
-		private ModEventBusEvents() {
-			super();
-		}
+        private ModEventBusEvents() {
+            super();
+        }
 
-		@SubscribeEvent
-		public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-			event.put(ModEntityTypes.BLUE_SLIME.get(), BlueSlime.setAttributes());
-		}
+        @SubscribeEvent
+        public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
+            event.put(ModEntityTypes.BLUE_SLIME.get(), BlueSlime.setAttributes());
+        }
 
-		@SubscribeEvent
-		public static void registerParticleProvider(final RegisterParticleProvidersEvent event) {
-			event.register(ModParticles.BLUE_SLIME_PARTICLES.get(), BlueSlimeParticle.Provider::new); 
-		}
+        @SubscribeEvent
+        public static void registerParticleProvider(final RegisterParticleProvidersEvent event) {
+            event.register(ModParticles.BLUE_SLIME_PARTICLES.get(),
+                    BlueSlimeParticle.Provider::new);
+        }
 
-		@SuppressWarnings("deprecation")
-		@SubscribeEvent
-		public static void commonSetup(FMLCommonSetupEvent event) {		
-			event.enqueueWork(() ->
-			SpawnPlacements.register(
-					ModEntityTypes.BLUE_SLIME.get(),
-					SpawnPlacements.Type.ON_GROUND, 
-					Heightmap.Types.WORLD_SURFACE, 
-					BlueSlime::checkSpawnRules)
-					);
-		}
-	}
+        @SuppressWarnings("deprecation")
+        @SubscribeEvent
+        public static void commonSetup(FMLCommonSetupEvent event) {
+            event.enqueueWork(() -> {
+                SpawnPlacements.register(ModEntityTypes.BLUE_SLIME.get(),
+                        SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE,
+                        BlueSlime::checkSpawnRules);
+                ModBrewingRecipes.setup();
+            });
+        }
+    }
 
-	@Mod.EventBusSubscriber(modid = BedrockIsUnbreakable.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-	public static class ClientModEvents {
+    @Mod.EventBusSubscriber(modid = BedrockIsUnbreakable.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
 
-		private ClientModEvents() {
-			super();
-		}
+        private ClientModEvents() {
+            super();
+        }
 
-		@SuppressWarnings("removal")
-		@SubscribeEvent
-		public static void onClientSetup(FMLClientSetupEvent event) {
-			// grass and crops
-			ItemBlockRenderTypes.setRenderLayer(ModBlocks.ONION_BLOCK.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(ModBlocks.ONION_GRASS.get(), RenderType.cutout());
-			
-			// blocks
-			ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_SLIME_BLOCK.get(), RenderType.translucent());
-			
-			// entities
-			EntityRenderers.register(ModEntityTypes.BLUE_SLIME.get(), BlueSlimeRenderer::new);
-		}
-	}
+        @SuppressWarnings("removal")
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            // grass and crops
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ONION_BLOCK.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ONION_GRASS.get(), RenderType.cutout());
+
+            // blocks
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_SLIME_BLOCK.get(),
+                    RenderType.translucent());
+
+            // entities
+            EntityRenderers.register(ModEntityTypes.BLUE_SLIME.get(), BlueSlimeRenderer::new);
+        }
+    }
 
 }

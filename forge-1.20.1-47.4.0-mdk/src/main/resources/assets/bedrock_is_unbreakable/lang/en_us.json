@@ -48,5 +48,10 @@
 
     // tool tips of TBIU
     "bedrock_is_unbreakable:press_shift": "Press Shift",
-    "bedrock_is_unbreakable:info_knife_item": "You can cut onions with a knife!"
+    "bedrock_is_unbreakable:info_knife_item": "You can cut onions with a knife!",
+
+    // potions
+    "item.minecraft.potion.effect.weeping_potion": "Weeping Potion",
+    "item.minecraft.splash_potion.effect.weeping_potion": "Splash Potion of Weeping",
+    "item.minecraft.lingering_potion.effect.weeping_potion": "Lingering Potion of Weeping"
 }
