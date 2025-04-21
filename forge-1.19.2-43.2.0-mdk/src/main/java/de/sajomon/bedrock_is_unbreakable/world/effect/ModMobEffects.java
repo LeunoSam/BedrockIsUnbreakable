@@ -18,7 +18,7 @@ public class ModMobEffects {
             BedrockIsUnbreakable.MOD_ID);
 
     public static final RegistryObject<MobEffect> WEEPING_EFFECT = EFFECTS.register("weeping_effect", 
-            () -> new WeepingEffect(MobEffectCategory.NEUTRAL, 21));
+            () -> new WeepingEffect(MobEffectCategory.NEUTRAL));
     
     public static void register(IEventBus eventBus) {
         EFFECTS.register(eventBus);
