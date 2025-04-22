@@ -1,3 +1,63 @@
 {
-  
+    // advancements of TBIU
+    "advancements.husbandry.onions.title": "Onions!",
+    "advancements.husbandry.onions.description": "Plant an onion.",
+    "advancements.husbandary.shedding_tears.title": "Shedding Tears",
+    "advancements.husbandary.shedding_tears.description": "Cut onions until you cry.",
+    "advancements.adventure.cute_slime.title": "Cute blue slimes",
+    "advancements.adventure.cute_slime.description": "Kill a blue slime :(",
+    "advancements.story.almost_done.title": "Almost done!",
+    "advancements.story.almost_done.description": "The one steel to rule them all!",
+    "advancements.story.destroyer_of_worlds.title": "Destroyer of Worlds",
+    "advancements.story.destroyer_of_worlds.description": "Now I am become Death, the destroyer of worlds! - Oppenheimer",
+
+    // items of TBIU
+    "item.bedrock_is_unbreakable.obsidian_ingot": "Obsidian Ingot",
+    "item.bedrock_is_unbreakable.crying_obsidian_ingot": "Crying Obsidian Ingot",
+    "item.bedrock_is_unbreakable.obsidian_stick": "Obsidian Stick",
+    "item.bedrock_is_unbreakable.obsidian_handle":"Obsidian Handle",
+    "item.bedrock_is_unbreakable.blue_slime_spawn_egg":"Blue Slime Spawn Egg",
+    "item.bedrock_is_unbreakable.sliced_onion": "Sliced Onion",
+    "item.bedrock_is_unbreakable.player_tears": "Tear",
+    "item.bedrock_is_unbreakable.onion": "Onion",
+    "item.bedrock_is_unbreakable.obsidian_iron_alloy": "Obsidian Iron Alloy",
+    "item.bedrock_is_unbreakable.obsidian_steel": "Obsidian Steel",
+    "item.bedrock_is_unbreakable.blue_slime_ball": "blue Slimeball",
+    "item.bedrock_is_unbreakable.obsidian_pickaxe": "Obsidian Pickaxe",
+    "item.bedrock_is_unbreakable.obsidian_knife": "Obsidian Knife",
+    "item.bedrock_is_unbreakable.obsidian_hoe": "Obsidian Hoe",
+    "item.bedrock_is_unbreakable.obsidian_axe": "Obsidian Axe",
+    "item.bedrock_is_unbreakable.obsidian_shovel": "Obsidian Shovel",
+    "item.bedrock_is_unbreakable.obsidian_steel_pickaxe": "Obsidian Steel Pickaxe",
+    "item.bedrock_is_unbreakable.onion_bread": "Onion Bread",
+
+    // blocks of TBIU
+    "block.bedrock_is_unbreakable.blue_slime_block": "Blue Slime Block",
+    "block.bedrock_is_unbreakable.obsidian_block": "Block of Obsidian",
+    "block.bedrock_is_unbreakable.obsidian_block_slab": "Obsidian Slab",
+    "block.bedrock_is_unbreakable.obsidian_block_stairs": "Obsidian Stairs",
+    "block.bedrock_is_unbreakable.obsidian_brick": "Obsidian Bricks",
+    "block.bedrock_is_unbreakable.obsidian_brick_stairs": "Obsidian Brick Stairs",
+    "block.bedrock_is_unbreakable.obsidian_brick_slab": "Obsidian Brick Slab",
+    "block.bedrock_is_unbreakable.onion_block": "Onion Crop",
+    "block.bedrock_is_unbreakable.onion_grass": "Onion Grass",
+
+    // item groups of TBIU
+    "itemGroup.bedrock_is_unbreakable_item_tab": "TBIU! Items",
+    "itemGroup.bedrock_is_unbreakable_block_tab": "TBIU! Blocks",
+
+    // tool tips of TBIU
+    "bedrock_is_unbreakable:press_shift": "Press Shift",
+    "bedrock_is_unbreakable:info_knife_item": "You can cut onions with a knife!",
+
+    // potions
+    "item.minecraft.potion.effect.weeping_potion": "Weeping Potion",
+    "item.minecraft.splash_potion.effect.weeping_potion": "Splash Potion of Weeping",
+    "item.minecraft.lingering_potion.effect.weeping_potion": "Lingering Potion of Weeping",
+
+    // tipped arrows
+    "item.minecraft.tipped_arrow.effect.weeping_potion": "Arrow of Weeping",
+
+    // effects
+    "effect.bedrock_is_unbreakable.weeping_effect": "Weeping"
 }

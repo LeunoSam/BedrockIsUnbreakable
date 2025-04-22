@@ -4,10 +4,10 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
+import de.sajomon.bedrock_is_unbreakable.item.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.common.NeoForge;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(BedrockIsUnbreakable.MOD_ID)
@@ -18,7 +18,7 @@ public class BedrockIsUnbreakable {
 
     public BedrockIsUnbreakable(IEventBus modEventBus, ModContainer modContainer) {
 
-//        ModItems.register(modEventBus);
+        ModItems.register(modEventBus);
 //        ModBlocks.register(modEventBus);
 //        ModCreativeModeTabs.register(modEventBus);
 //

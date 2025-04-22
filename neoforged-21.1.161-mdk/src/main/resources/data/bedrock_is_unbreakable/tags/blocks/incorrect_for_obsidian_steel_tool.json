@@ -1,0 +1,8 @@
+{
+    "values": [
+        "#bedrock_is_unbreakable:needs_obsidian_tool"
+    ],
+    "remove": [
+        "#bedrock_is_unbreakable:needs_obsidian_steel_tool"
+    ]
+}

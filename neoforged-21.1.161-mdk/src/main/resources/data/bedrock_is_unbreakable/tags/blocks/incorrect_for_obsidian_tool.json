@@ -1,0 +1,8 @@
+{
+    "values": [
+        "#minecraft:incorrect_for_netherite_tool"
+    ],
+    "remove": [
+        "#bedrock_is_unbreakable:needs_obsidian_tool"
+    ]
+}
