@@ -15,7 +15,7 @@ public class ModPotions {
             .create(ForgeRegistries.POTIONS, BedrockIsUnbreakable.MOD_ID);
 
     public static final RegistryObject<Potion> WEEPING_POTION = POTIONS.register("weeping_potion",
-            () -> new Potion(new MobEffectInstance(ModMobEffects.WEEPING_EFFECT.get(), 200, 0)));
+            () -> new Potion(new MobEffectInstance(ModMobEffects.WEEPING_EFFECT.get(), 400, 0)));
 
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);

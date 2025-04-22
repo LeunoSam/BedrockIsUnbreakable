@@ -18,7 +18,7 @@
     "item.bedrock_is_unbreakable.obsidian_handle":"Obsidian Handle",
     "item.bedrock_is_unbreakable.blue_slime_spawn_egg":"Blue Slime Spawn Egg",
     "item.bedrock_is_unbreakable.sliced_onion": "Sliced Onion",
-    "item.bedrock_is_unbreakable.player_tears": "Tears",
+    "item.bedrock_is_unbreakable.player_tears": "Tear",
     "item.bedrock_is_unbreakable.onion": "Onion",
     "item.bedrock_is_unbreakable.obsidian_iron_alloy": "Obsidian Iron Alloy",
     "item.bedrock_is_unbreakable.obsidian_steel": "Obsidian Steel",
@@ -53,5 +53,11 @@
     // potions
     "item.minecraft.potion.effect.weeping_potion": "Weeping Potion",
     "item.minecraft.splash_potion.effect.weeping_potion": "Splash Potion of Weeping",
-    "item.minecraft.lingering_potion.effect.weeping_potion": "Lingering Potion of Weeping"
+    "item.minecraft.lingering_potion.effect.weeping_potion": "Lingering Potion of Weeping",
+
+    // tipped arrows
+    "item.minecraft.tipped_arrow.effect.weeping_potion": "Arrow of Weeping",
+
+    // effects
+    "effect.bedrock_is_unbreakable.weeping_effect": "Weeping"
 }
