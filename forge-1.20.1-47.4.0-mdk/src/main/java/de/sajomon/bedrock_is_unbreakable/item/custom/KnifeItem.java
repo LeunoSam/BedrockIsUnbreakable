@@ -75,7 +75,7 @@ public class KnifeItem extends SwordItem {
         if (slot != -1) {
             cutOnion(player, inventory, slot);
             cryRandomly(player, inventory, level);
-            player.getMainHandItem().hurtAndBreak(10, player, p41625 -> p41625.broadcastBreakEvent(hand));
+            player.getMainHandItem().hurtAndBreak(5, player, p41625 -> p41625.broadcastBreakEvent(hand));
             player.getCooldowns().addCooldown(this, 5);
         }
     }

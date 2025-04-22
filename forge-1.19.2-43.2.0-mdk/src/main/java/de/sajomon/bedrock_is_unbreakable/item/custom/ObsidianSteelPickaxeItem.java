@@ -39,7 +39,7 @@ public class ObsidianSteelPickaxeItem extends PickaxeItem {
     private void destroyBlock(Player player, InteractionHand hand, Level level, BlockPos pos) {
         if (level.destroyBlock(pos, false)) {
             player.getCooldowns().addCooldown(this, 5);
-            player.getMainHandItem().hurtAndBreak(10, player, p41625 -> p41625.broadcastBreakEvent(hand));
+            player.getMainHandItem().hurtAndBreak(10, player, pplayer -> pplayer.broadcastBreakEvent(hand));
         }
     }
 

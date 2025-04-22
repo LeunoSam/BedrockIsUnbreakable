@@ -57,7 +57,7 @@ public class KnifeItem extends SwordItem {
                     player.hurt(DamageSource.sting(player), 1f);
                     player.giveExperiencePoints(2);
                 }
-                player.getMainHandItem().hurtAndBreak(10, player, p41625 -> p41625.broadcastBreakEvent(hand));
+                player.getMainHandItem().hurtAndBreak(5, player, p41625 -> p41625.broadcastBreakEvent(hand));
                 player.getCooldowns().addCooldown(this, 5);
             }
         }
