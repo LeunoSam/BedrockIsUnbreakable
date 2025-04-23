@@ -1,0 +1,13 @@
+{
+  "feature": "bedrock_is_unbreakable:onion_grass",
+  "placement": [
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 100
+    }
+  ]
+}
