@@ -1,11 +1,11 @@
 package de.sajomon.bedrock_is_unbreakable.item.custom;
 
+import de.sajomon.bedrock_is_unbreakable.item.ModToolTiers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -13,8 +13,8 @@ import net.minecraft.world.level.block.Blocks;
 
 public class ObsidianSteelPickaxeItem extends PickaxeItem {
 
-    public ObsidianSteelPickaxeItem(Tier tier, Properties props) {
-        super(tier, props);
+    public ObsidianSteelPickaxeItem(Properties props) {
+        super(ModToolTiers.OBSIDIAN_STEEL, props);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package de.sajomon.bedrock_is_unbreakable.block.custom;
 
+import de.sajomon.bedrock_is_unbreakable.item.ModItems;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
@@ -7,7 +8,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.block.state.properties.Property;
 
 public class OnionBlock extends CropBlock {
 
@@ -21,9 +21,7 @@ public class OnionBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        // TODO implement as soon ModItems is implemented
-//        return ModItems.ONION.get();
-        return null;
+        return ModItems.ONION.get();
     }
 
     @Override
@@ -38,6 +36,6 @@ public class OnionBlock extends CropBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add((Property<?>) AGE);
+        builder.add(AGE);
     }
 }

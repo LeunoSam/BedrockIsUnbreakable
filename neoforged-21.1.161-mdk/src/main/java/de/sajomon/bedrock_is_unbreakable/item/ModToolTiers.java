@@ -11,6 +11,6 @@ public class ModToolTiers {
             () -> Ingredient.of(ModItems.OBSIDIAN_INGOT.get()));
 
     public static final Tier OBSIDIAN_STEEL = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_OBSIDIAN_STEEL_TOOL, 2500,
-            12f, 4f, 20, () -> Ingredient.of(ModItems.OBSIDIAN_INGOT.get()));
+            12f, 4f, 20, () -> Ingredient.of(ModItems.OBSIDIAN_STEEL.get()));
 
 }

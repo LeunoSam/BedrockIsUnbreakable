@@ -3,6 +3,8 @@ package de.sajomon.bedrock_is_unbreakable.block;
 import java.util.Objects;
 import java.util.function.Supplier;
 
+import de.sajomon.bedrock_is_unbreakable.item.ModItems;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -30,8 +32,7 @@ public class ModBlock {
     }
 
     private void registerBlockItem() {
-        // TODO implement as soon ModItems works
-//        blockItem = ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        blockItem = ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public DeferredBlock<Block> getBlock() {

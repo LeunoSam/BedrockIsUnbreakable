@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
+import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
 import de.sajomon.bedrock_is_unbreakable.item.custom.KnifeItem;
 import de.sajomon.bedrock_is_unbreakable.item.custom.ObsidianSteelPickaxeItem;
 import net.minecraft.world.food.FoodProperties;
@@ -14,12 +15,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
 
 public class ModItems {
 
@@ -46,49 +45,53 @@ public class ModItems {
 
     // food
     public static final DeferredItem<Item> ONION = create("onion", () -> {
-        ItemNameBlockItem newOnion = new ItemNameBlockItem(Blocks.POTATOES, // TODO OnionBlock
+        ItemNameBlockItem newOnion = new ItemNameBlockItem(ModBlocks.ONION_BLOCK.getBlock().get(),
                 new Item.Properties());
         ComposterBlock.COMPOSTABLES.put(newOnion.asItem(), 0.65f);
         return newOnion;
     });
 
     public static final DeferredItem<Item> SLICED_ONION = create("sliced_onion", () -> {
-        Item newSlicedOnion = new Item(new Item.Properties()
-                .food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.5f).build()));
+        Item newSlicedOnion = new Item(
+                new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.5f).build()));
         ComposterBlock.COMPOSTABLES.put(newSlicedOnion.asItem(), 0.5f);
         return newSlicedOnion;
     });
 
-    public static final DeferredItem<Item> ONION_BREAD = create("onion_bread",
-            () -> new Item(new Item.Properties()
-                    .food(new FoodProperties.Builder().nutrition(7).saturationModifier(0.8f).build())));
+    public static final DeferredItem<Item> ONION_BREAD = create("onion_bread", () -> new Item(
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(7).saturationModifier(0.8f).build())));
 
     // tools
     public static final DeferredItem<Item> OBSIDIAN_KNIFE = create("obsidian_knife",
-            () -> new KnifeItem(ModToolTiers.OBSIDIAN, -1, -0.8f, new Item.Properties(), 20));
+            () -> new KnifeItem(ModToolTiers.OBSIDIAN, -1, -0.8f,
+                    new Item.Properties().attributes(KnifeItem.createAttributes(ModToolTiers.OBSIDIAN, -1f, -0.8f)),
+                    20));
 
     public static final DeferredItem<Item> OBSIDIAN_HOE = create("obsidian_hoe",
-            () -> new HoeItem(ModToolTiers.OBSIDIAN, new Item.Properties()));
+            () -> new HoeItem(ModToolTiers.OBSIDIAN,
+                    new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.OBSIDIAN, -4f, 0f))));
 
     public static final DeferredItem<Item> OBSIDIAN_AXE = create("obsidian_axe",
-            () -> new AxeItem(ModToolTiers.OBSIDIAN, new Item.Properties()));
+            () -> new AxeItem(ModToolTiers.OBSIDIAN,
+                    new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.OBSIDIAN, 4f, -3f))));
 
     public static final DeferredItem<Item> OBSIDIAN_SHOVEL = create("obsidian_shovel",
-            () -> new ShovelItem(ModToolTiers.OBSIDIAN, new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.OBSIDIAN,
+                    new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.OBSIDIAN, 0.5f, -3f))));
 
     public static final DeferredItem<Item> OBSIDIAN_PICKAXE = create("obsidian_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.OBSIDIAN, new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.OBSIDIAN,
+                    new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.OBSIDIAN, 0, -2.8f))));
 
-    public static final DeferredItem<Item> OBSIDIAN_STEEL_PICKAXE = create(
-            "obsidian_steel_pickaxe",
-            () -> new ObsidianSteelPickaxeItem(ModToolTiers.OBSIDIAN_STEEL, new Item.Properties()));
+    public static final DeferredItem<Item> OBSIDIAN_STEEL_PICKAXE = create("obsidian_steel_pickaxe",
+            () -> new ObsidianSteelPickaxeItem(
+                    new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.OBSIDIAN, 1f, -2.8f))));
 
     // player / mob drops
     public static final DeferredItem<Item> BLUE_SLIME_BALL = create("blue_slime_ball",
             () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> PLAYER_TEARS = create("player_tears",
-            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PLAYER_TEARS = create("player_tears", () -> new Item(new Item.Properties()));
 
     // spawn eggs TODO
 //    public static final DeferredItem<Item> BLUE_SLIME_SPAWN_EGG = create("blue_slime_spawn_egg",

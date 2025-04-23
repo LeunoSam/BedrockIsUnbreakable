@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bedrock_is_unbreakable:block/obsidian_brick_slab"
+    },
+    "type=double": {
+      "model": "bedrock_is_unbreakable:block/obsidian_brick"
+    },
+    "type=top": {
+      "model": "bedrock_is_unbreakable:block/obsidian_brick_slab_top"
+    }
+  }
+}

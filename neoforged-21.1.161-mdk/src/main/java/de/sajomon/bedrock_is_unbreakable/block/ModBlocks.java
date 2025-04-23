@@ -11,6 +11,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TallGrassBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -25,27 +27,22 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(275f)
                     .requiresCorrectToolForDrops().explosionResistance(2000f)));
 
-//    public static final ModBlock OBSIDIAN_BLOCK_STAIRS = create("obsidian_block_stairs",
-//            () -> new StairBlock(() -> OBSIDIAN_BLOCK.getBlock().get().defaultBlockState(),
-//                    BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(275f)
-//                            .requiresCorrectToolForDrops().explosionResistance(2000f)));
+    public static final ModBlock OBSIDIAN_BLOCK_STAIRS = create("obsidian_block_stairs",
+            () -> new StairBlock(OBSIDIAN_BLOCK.getBlock().get().defaultBlockState(), 
+                    OBSIDIAN_BLOCK.getBlock().get().properties()));
 
     public static final ModBlock OBSIDIAN_BLOCK_SLAB = create("obsidian_block_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(275f)
-                    .requiresCorrectToolForDrops().explosionResistance(2000f)));
+            () -> new SlabBlock(OBSIDIAN_BLOCK.getBlock().get().properties()));
 
     public static final ModBlock OBSIDIAN_BRICK = create("obsidian_brick",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(275f)
-                    .requiresCorrectToolForDrops().explosionResistance(2000f)));
-//
-//    public static final ModBlock OBSIDIAN_BRICK_STAIRS = create("obsidian_brick_stairs",
-//            () -> new StairBlock(() -> OBSIDIAN_BRICK.getBlock().get().defaultBlockState(),
-//                    BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(275f)
-//                            .requiresCorrectToolForDrops().explosionResistance(2000f)));
+            () -> new Block(OBSIDIAN_BLOCK.getBlock().get().properties()));
+
+    public static final ModBlock OBSIDIAN_BRICK_STAIRS = create("obsidian_brick_stairs",
+            () -> new StairBlock(OBSIDIAN_BLOCK.getBlock().get().defaultBlockState(), 
+                    OBSIDIAN_BLOCK.getBlock().get().properties()));
 
     public static final ModBlock OBSIDIAN_BRICK_SLAB = create("obsidian_brick_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(275f)
-                    .requiresCorrectToolForDrops().explosionResistance(2000f)));
+            () -> new SlabBlock(OBSIDIAN_BLOCK.getBlock().get().properties()));
 
     public static final ModBlock ONION_BLOCK = create("onions",
             () -> new OnionBlock(
@@ -54,9 +51,9 @@ public class ModBlocks {
 
     public static final ModBlock BLUE_SLIME_BLOCK = create("blue_slime_block",
             () -> new BlueSlimeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SLIME_BLOCK)));
-//
-//    public static final ModBlock ONION_GRASS = create("onion_grass",
-//            () -> new BushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
+
+    public static final ModBlock ONION_GRASS = create("onion_grass",
+            () -> new TallGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS)));
 
     private static List<ModBlock> allBlocks;
     private static List<DeferredItem<Item>> creativeModeTabItems;
