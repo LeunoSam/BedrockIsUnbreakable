@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 2.0,
+  "ingredient": {
+    "item": "minecraft:crying_obsidian"
+  },
+  "result": {
+    "count": 2,
+    "id": "bedrock_is_unbreakable:crying_obsidian_ingot"
+  }
+}

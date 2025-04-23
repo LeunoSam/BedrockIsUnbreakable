@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#*#",
+    " # "
+  ],
+  
+  "key": {
+    "#": {
+    "item": "bedrock_is_unbreakable:player_tears"
+    },
+    "*": {
+    "item": "bedrock_is_unbreakable:obsidian_ingot"
+    }
+  },
+  
+  "result": {
+    "count": 1,
+    "id": "bedrock_is_unbreakable:crying_obsidian_ingot"
+  }
+}

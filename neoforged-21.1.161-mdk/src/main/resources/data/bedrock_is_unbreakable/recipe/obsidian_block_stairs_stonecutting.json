@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "bedrock_is_unbreakable:obsidian_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "bedrock_is_unbreakable:obsidian_block_stairs"
+  }
+}

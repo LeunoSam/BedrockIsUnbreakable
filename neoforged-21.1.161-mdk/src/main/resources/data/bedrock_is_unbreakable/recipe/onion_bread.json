@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ooo",
+        "www",
+        "ooo"
+    ],
+    "key": {
+        "w": {
+            "item": "minecraft:wheat"
+        },
+        "o": {
+            "item": "bedrock_is_unbreakable:sliced_onion"
+        }
+    },
+    "result": {
+        "count": 1,
+        "id": "bedrock_is_unbreakable:onion_bread"
+    }
+}
