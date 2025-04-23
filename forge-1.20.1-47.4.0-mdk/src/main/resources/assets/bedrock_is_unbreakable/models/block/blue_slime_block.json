@@ -1,4 +1,5 @@
 {   "parent": "block/block",
+    "render_type": "minecraft:translucent",
     "textures": {
         "particle": "bedrock_is_unbreakable:block/blue_slime_block",
         "texture": "bedrock_is_unbreakable:block/blue_slime_block"
