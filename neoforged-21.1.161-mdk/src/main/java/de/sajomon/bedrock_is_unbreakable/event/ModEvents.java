@@ -7,6 +7,8 @@ import de.sajomon.bedrock_is_unbreakable.entity.custom.BlueSlime;
 import de.sajomon.bedrock_is_unbreakable.particle.ModParticles;
 import de.sajomon.bedrock_is_unbreakable.particle.custom.BlueSlimeParticle;
 import de.sajomon.bedrock_is_unbreakable.potions.ModBrewingRecipes;
+import net.minecraft.world.entity.SpawnPlacementTypes;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -14,6 +16,7 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
 //@EventBusSubscriber(modid = BedrockIsUnbreakable.MOD_ID)
 public class ModEvents {
@@ -34,16 +37,13 @@ public class ModEvents {
             event.put(ModEntityTypes.BLUE_SLIME.get(), BlueSlime.createAttributes().build());
         }
 
-//        @SuppressWarnings("deprecation")
-//        @SubscribeEvent
-//        public static void commonSetup(FMLCommonSetupEvent event) {
-//            event.enqueueWork(() -> {
-//                SpawnPlacements.register(ModEntityTypes.BLUE_SLIME.get(),
-//                        SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE,
-//                        BlueSlime::checkSpawnRules);
-//                ModBrewingRecipes.setup();
-//            });
-//        }
+        @SubscribeEvent
+        public static void registerSpawnPlacements(RegisterSpawnPlacementsEvent event) {
+            event.register(ModEntityTypes.BLUE_SLIME.get(), SpawnPlacementTypes.ON_GROUND,
+                    Heightmap.Types.WORLD_SURFACE, BlueSlime::checkSpawnRules,
+                    RegisterSpawnPlacementsEvent.Operation.REPLACE);
+        }
+
     }
 
     @EventBusSubscriber(modid = BedrockIsUnbreakable.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -77,4 +77,5 @@ public class ModEvents {
             ModBrewingRecipes.registerBrewingRecipes(event);
         }
     }
+
 }

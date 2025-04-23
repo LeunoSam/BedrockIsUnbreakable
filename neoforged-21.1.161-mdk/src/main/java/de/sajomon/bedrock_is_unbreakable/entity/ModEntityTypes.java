@@ -18,7 +18,7 @@ public class ModEntityTypes {
             .create(BuiltInRegistries.ENTITY_TYPE, BedrockIsUnbreakable.MOD_ID);
 
     public static final Supplier<EntityType<BlueSlime>> BLUE_SLIME = ENTITY_TYPES.register("blue_slime",
-            () -> EntityType.Builder.of(BlueSlime::new, MobCategory.MONSTER).sized(2f, 2f).build(
+            () -> EntityType.Builder.of(BlueSlime::new, MobCategory.MONSTER).sized(0.5f, 0.5f).build(
                     ResourceLocation.fromNamespaceAndPath(BedrockIsUnbreakable.MOD_ID, "blue_slime").toString()));
 
     public static void register(IEventBus eventBus) {
