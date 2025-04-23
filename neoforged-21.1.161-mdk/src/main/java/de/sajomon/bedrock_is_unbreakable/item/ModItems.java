@@ -21,6 +21,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
 
 public class ModItems {
 
@@ -46,19 +47,11 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     // food
-    public static final DeferredItem<Item> ONION = create("onion", () -> {
-        ItemNameBlockItem newOnion = new ItemNameBlockItem(ModBlocks.ONION_BLOCK.getBlock().get(),
-                new Item.Properties());
-        ComposterBlock.COMPOSTABLES.put(newOnion.asItem(), 0.65f);
-        return newOnion;
-    });
+    public static final DeferredItem<Item> ONION = create("onion", () -> 
+        new ItemNameBlockItem(ModBlocks.ONION_BLOCK.getBlock().get(), new Item.Properties()));
 
-    public static final DeferredItem<Item> SLICED_ONION = create("sliced_onion", () -> {
-        Item newSlicedOnion = new Item(
-                new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.5f).build()));
-        ComposterBlock.COMPOSTABLES.put(newSlicedOnion.asItem(), 0.5f);
-        return newSlicedOnion;
-    });
+    public static final DeferredItem<Item> SLICED_ONION = create("sliced_onion", () -> new Item(
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.5f).build())));
 
     public static final DeferredItem<Item> ONION_BREAD = create("onion_bread", () -> new Item(
             new Item.Properties().food(new FoodProperties.Builder().nutrition(7).saturationModifier(0.8f).build())));
@@ -96,7 +89,7 @@ public class ModItems {
     public static final DeferredItem<Item> PLAYER_TEARS = create("player_tears", () -> new Item(new Item.Properties()));
 
     // spawn eggs
-    public static final DeferredItem<Item> BLUE_SLIME_SPAWN_EGG = ITEMS.register("blue_slime_spawn_egg", 
+    public static final DeferredItem<Item> BLUE_SLIME_SPAWN_EGG = create("blue_slime_spawn_egg", 
             () -> new DeferredSpawnEggItem(ModEntityTypes.BLUE_SLIME, 984442, 4617149, new Item.Properties()));
 
     private static List<DeferredItem<Item>> allItems;

@@ -1,0 +1,10 @@
+{
+    "values": {
+        "bedrock_is_unbreakable:onion": {
+            "chance": 0.65
+        },
+        "bedrock_is_unbreakable:sliced_onion": {
+            "chance": 0.65
+        }
+    }
+}
