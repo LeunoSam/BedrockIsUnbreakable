@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "bedrock_is_unbreakable:player_tears"
+    },
+    "title": {
+      "translate": "advancements.husbandary.shedding_tears.title"
+    },
+    "description": {
+      "translate": "advancements.husbandary.shedding_tears.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "bedrock_is_unbreakable:husbandry/onions",
+  "criteria": {
+    "bedrock_is_unbreakable:onions": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bedrock_is_unbreakable:player_tears"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sends_telemetry_event": true
+}

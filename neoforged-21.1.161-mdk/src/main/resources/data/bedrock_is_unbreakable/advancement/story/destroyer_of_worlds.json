@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "bedrock_is_unbreakable:obsidian_steel_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.story.destroyer_of_worlds.title"
+    },
+    "description": {
+      "translate": "advancements.story.destroyer_of_worlds.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "bedrock_is_unbreakable:story/almost_done",
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "bedrock_is_unbreakable:obsidian_steel_pickaxe"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "sends_telemetry_event": true
+}
