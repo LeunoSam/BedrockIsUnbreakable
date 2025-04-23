@@ -35,6 +35,7 @@ public class WeepingEffect extends MobEffect {
         ItemEntity itementity = createItemEntity(entity.level(), entity.getX(), entity.getY(),
                 entity.getZ());
         itementity.setThrower(entity);
+        itementity.setDefaultPickUpDelay();
         entity.level().addFreshEntity(itementity);
     }
 
