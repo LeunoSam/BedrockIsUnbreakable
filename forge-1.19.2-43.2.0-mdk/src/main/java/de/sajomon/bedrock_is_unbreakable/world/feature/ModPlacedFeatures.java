@@ -25,7 +25,7 @@ public class ModPlacedFeatures {
 	public static final RegistryObject<PlacedFeature> ONION_GRASS_PLACED =
 			PLACED_FEATURES.register("onion_grass_placed",
 					() -> new PlacedFeature(ModConfiguredFeatures.ONION_GRASS.getHolder().get(),
-							List.of(RarityFilter.onAverageOnceEvery(8), InSquarePlacement.spread(),
+							List.of(RarityFilter.onAverageOnceEvery(100), InSquarePlacement.spread(),
 									PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
 	
 	public static void register(IEventBus bus) {

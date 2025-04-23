@@ -25,7 +25,7 @@ public class ModConfiguredFeatures {
 	public static final RegistryObject<ConfiguredFeature<?, ?>> ONION_GRASS =
 			CONFIGURED_FEATURES.register("onion_grass",
 				() -> new ConfiguredFeature<>(Feature.FLOWER,
-						new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+						new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
 								new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ONION_GRASS.get())))
 								))
 				);
