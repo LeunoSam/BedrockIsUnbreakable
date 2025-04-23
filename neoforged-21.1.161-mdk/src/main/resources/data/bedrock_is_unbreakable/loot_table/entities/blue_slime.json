@@ -9,7 +9,7 @@
           "entity": "this",
           "predicate": {
             "type_specific": {
-              "type": "slime",
+              "type": "minecraft:slime",
               "size": 1
             }
           }
@@ -47,7 +47,8 @@
                 "max": 1.0,
                 "min": 0.0
               },
-              "function": "minecraft:looting_enchant"
+              "enchantment": "minecraft:looting",
+              "function": "minecraft:enchanted_count_increase"
             }
           ],
           "name": "bedrock_is_unbreakable:blue_slime_ball"
@@ -76,5 +77,6 @@
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "bedrock_is_unbreakable:entities/blue_slime"
 }

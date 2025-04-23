@@ -19,7 +19,7 @@
                   }
                 }
               ],
-              "name": "minecraft:grass"
+              "name": "bedrock_is_unbreakable:onion_grass"
             },
             {
               "type": "minecraft:item",

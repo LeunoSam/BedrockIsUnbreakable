@@ -13,13 +13,11 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "items": [
-                      "minecraft:shears"
-                    ]
+                    "items": "minecraft:shears"
                   }
                 }
               ],
-              "name": "minecraft:grass"
+              "name": "bedrock_is_unbreakable:onion_grass"
             },
             {
               "type": "minecraft:item",
@@ -49,5 +47,6 @@
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "minecraft:blocks/short_grass"
 }
