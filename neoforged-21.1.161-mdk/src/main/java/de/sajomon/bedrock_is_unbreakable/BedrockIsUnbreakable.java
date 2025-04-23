@@ -5,8 +5,10 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 
 import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
+import de.sajomon.bedrock_is_unbreakable.entity.ModEntityTypes;
 import de.sajomon.bedrock_is_unbreakable.item.ModCreativeModeTabs;
 import de.sajomon.bedrock_is_unbreakable.item.ModItems;
+import de.sajomon.bedrock_is_unbreakable.particle.ModParticles;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -27,8 +29,8 @@ public class BedrockIsUnbreakable {
 //        ModMobEffects.register(modEventBus);
 //        ModPotions.register(modEventBus);
 //
-//        ModEntityTypes.register(modEventBus);
-//        ModParticles.register(modEventBus);
+        ModEntityTypes.register(modEventBus);
+        ModParticles.register(modEventBus);
 
     }
 

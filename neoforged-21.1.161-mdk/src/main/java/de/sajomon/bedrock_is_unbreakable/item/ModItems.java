@@ -6,6 +6,7 @@ import java.util.function.Supplier;
 
 import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
 import de.sajomon.bedrock_is_unbreakable.block.ModBlocks;
+import de.sajomon.bedrock_is_unbreakable.entity.ModEntityTypes;
 import de.sajomon.bedrock_is_unbreakable.item.custom.KnifeItem;
 import de.sajomon.bedrock_is_unbreakable.item.custom.ObsidianSteelPickaxeItem;
 import net.minecraft.world.food.FoodProperties;
@@ -17,6 +18,7 @@ import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -93,10 +95,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> PLAYER_TEARS = create("player_tears", () -> new Item(new Item.Properties()));
 
-    // spawn eggs TODO
-//    public static final DeferredItem<Item> BLUE_SLIME_SPAWN_EGG = create("blue_slime_spawn_egg",
-//            () -> new SpawnEggItem(ModEntityTypes.BLUE_SLIME, 984442, 4617149,
-//                    new Item.Properties()));
+    // spawn eggs
+    public static final DeferredItem<Item> BLUE_SLIME_SPAWN_EGG = ITEMS.register("blue_slime_spawn_egg", 
+            () -> new DeferredSpawnEggItem(ModEntityTypes.BLUE_SLIME, 984442, 4617149, new Item.Properties()));
 
     private static List<DeferredItem<Item>> allItems;
 
