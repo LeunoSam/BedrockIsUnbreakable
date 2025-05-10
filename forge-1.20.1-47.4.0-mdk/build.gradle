@@ -5,11 +5,15 @@ plugins {
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
 }
 
-version = '1.20.1-1.2'
-group = 'de.sajomon.bedrock_is_unbreakable'
+version = mod_version
+group = mod_group_id
+
+repositories {
+    mavenLocal()
+}
 
 base {
-    archivesName = 'bedrock_is_unbreakable'
+    archivesName = mod_id + "-" + minecraft_version
 }
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
