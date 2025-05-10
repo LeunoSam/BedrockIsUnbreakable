@@ -23,6 +23,6 @@
         "type": "bedrock_is_unbreakable:blue_slime",
         "weight": 10,
         "minCount": 1,
-        "maxCount": 1
+        "maxCount": 3
     }
 }

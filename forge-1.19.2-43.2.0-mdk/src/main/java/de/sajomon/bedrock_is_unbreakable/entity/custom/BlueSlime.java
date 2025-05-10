@@ -1,6 +1,5 @@
 package de.sajomon.bedrock_is_unbreakable.entity.custom;
 
-import de.sajomon.bedrock_is_unbreakable.BedrockIsUnbreakable;
 import de.sajomon.bedrock_is_unbreakable.particle.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
@@ -11,8 +10,11 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.Slime;
+import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.levelgen.WorldgenRandom;
 
 public class BlueSlime extends Slime {
 
@@ -35,14 +37,37 @@ public class BlueSlime extends Slime {
             ServerLevelAccessor level, MobSpawnType spawnType, BlockPos pos, RandomSource random) {
         if (spawnType == MobSpawnType.SPAWNER || spawnType == MobSpawnType.SPAWN_EGG) {
             return true;
-        } else {
-            if (checkMobSpawnRules(entityType, level, spawnType, pos, random) && pos.getY() > 100
-                    && (level.dayTime() % 24000) < 12999) {
-                BedrockIsUnbreakable.LOGGER.info("BlueSlime spawned!");
-                return true;
-            } else {
-                return false;
-            }
         }
+
+        if (isBlueSlimeSpawnable(level, pos, random)) {
+            return checkMobSpawnRules(entityType, level, spawnType, pos, random);
+        }
+
+        return false;
+    }
+
+    private static boolean isBlueSlimeSpawnable(ServerLevelAccessor level, BlockPos pos,
+            RandomSource random) {
+        return isDay(level) && isSlimeChunk(level, pos) && nextHeightRandom(random, pos.getY());
+    }
+
+    private static boolean nextHeightRandom(RandomSource random, int y) {
+        if (y < 100) {
+            return false;
+        }
+        if (y > 160) {
+            return true;
+        }
+        return random.nextInt((200 - y) / 20) == 0;
+    }
+
+    private static boolean isDay(ServerLevelAccessor level) {
+        return (level.dayTime() % 24000) < 12999;
+    }
+
+    private static boolean isSlimeChunk(ServerLevelAccessor level, BlockPos pos) {
+        ChunkPos chunkpos = new ChunkPos(pos);
+        return WorldgenRandom.seedSlimeChunk(chunkpos.x, chunkpos.z,
+                ((WorldGenLevel) level).getSeed(), 987234911L).nextInt(10) == 0;
     }
 }
