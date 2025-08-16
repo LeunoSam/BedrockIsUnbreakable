@@ -8,7 +8,7 @@ This Mod provides a pickaxe,  which can **destroy bedrock** with a right click a
 |MC Version|Mod Version|Mod Loader|Status|
 |--------|--------|--------|--------|
 |1.21.1|1.2 - 1.3|NeoForged 21.1.161|Dev-Test only|
-|1.20.1|1.3|Forge 47.4.0|Dev-Test only|
+|1.20.1|1.3|Forge 47.4.0|Stable|
 |1.20.1|1.0 - 1.2|Forge 47.4.0|Stable|
 |1.19.2|1.0 - 1.3|Forge 43.2.0|Dev-Test only|
 
